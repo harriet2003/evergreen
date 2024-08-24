@@ -1,0 +1,15 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+nav h5 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav i {
+    font-size: 1.5rem;
+}

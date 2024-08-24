@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --offwhite: #F7F7F7;
+    --lightGreen: #DBEDCC;
+    --cream: #faecd2;
+    --lime: #afc300;
+    --salmon: #fe9a66;
+    --green: #194923;
+    --orange: #ff5c00;
+    --forest: #172a28;
+    --maroon: #6d1d14;
+}
+
+/* UNIVERSAL STYLES */
+
+body {
+    width: 100vw;
+    margin: 0;
+}
+
+main {
+    margin: 2rem;
+}
+
+header {
+    margin: 2rem;
+}
+
+.button {
+    padding: 0.75rem 1.25rem;
+    min-width: 120px;
+    background-color: white;
+    border: none;
+}
+
+.button:hover {
+    background-color: var(--lightGreen);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+
+/* LANDING */
+
+#landing {
+    height: 100vh;
+    width: auto;
+    background-image: url(../images/landing-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+#landing .button {
+    margin-top: 4rem;
+}
+
+/* INTRO */
+.gradientBackground {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-inline: 3rem;
+}
+
+.progressBar {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.currentCircle {
+    color: var(--salmon);
+}
+
+.intro footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-block: 2rem;
+}
+
+.introFooterContent {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 1.5rem;
+}
+
+.skip {
+    padding-right: 2rem;
+}
+
+/* ABOUT PAGE */
+
+.aboutPage {
+    height: 100vh;
+    background-image: url(../images/aboutBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.aboutPage article:first-child {
+    margin-bottom: 5rem;
+}
+
+#actions {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem 2rem;
+}
+
+.actionBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.actionBox div {
+    border: 1px solid white;
+    aspect-ratio: 1/1;
+}
+
+.aboutPage footer {
+    text-align: center;
+    padding: 1rem 1rem 2rem 1rem;
+    color: var(--lime);
+}

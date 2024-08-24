@@ -6,30 +6,39 @@
       <title>Evergreen - The Problem</title>
       <link rel="stylesheet" href="css/styles.css" />
       <link rel="stylesheet" href="css/typography.css" />
+      <link rel="stylesheet" href="css/gradient.css" />
       <script src="js/script.js"></script>
       <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
    </head>
 
-   <body>
-      <p>Evergreen</p>
+   <body class="gradientBackground intro">
+      <header>
+         <p class="capitalise">Evergreen</p>
+      </header>
 
-      <div class="progressBar1">
-         <i class="fa-solid fa-circle"></i>
-         <i class="fa-solid fa-circle"></i>
-         <i class="fa-solid fa-circle"></i>
-         <i class="fa-solid fa-circle"></i>
-         <i class="fa-solid fa-circle"></i>
-      </div>
+      <main class="introContent">
+         <div class="progressBar" id="progressBar1">
+            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+         </div>
 
-      <div class="introText">
-         <h5>
-            New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and
-            wildlife forms have evolved to create the lush and vibrant Aotearoa we know today.
-            <!--Make this an array to swap out the text-->
-         </h5>
-      </div>
+         <div class="introText">
+            <h5>
+               New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and
+               wildlife forms have evolved to create the lush and vibrant Aotearoa we know today.
+               <!--Make this an array to swap out the text-->
+            </h5>
+         </div>
+      </main>
 
-      <i class="fa-solid fa-arrow-down"></i>
-      <a href="ourForest.php">Skip</a>
+      <footer>
+         <div class="introFooterContent">
+            <i class="fa-solid fa-arrow-down arrow"></i>
+            <a href="ourForest.php" class="skip">Skip</a>
+         </div>
+      </footer>
    </body>
 </html>
