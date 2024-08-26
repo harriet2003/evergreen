@@ -6,7 +6,7 @@
       <title>Evergreen - About</title>
       <link rel="stylesheet" href="css/styles.css" />
       <link rel="stylesheet" href="css/typography.css" />
-      <link rel="stylesheet" href="css/navbar.css">
+      <link rel="stylesheet" href="css/navbar.css" />
       <script src="js/script.js"></script>
       <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
    </head>
@@ -14,9 +14,19 @@
    <body class="aboutPage">
       <header>
          <nav>
-            <h5>Evergreen</h5>
-            <i class="fa-solid fa-bars"></i>
+            <a href="ourForest.php">Evergreen</a>
+            <i class="fa-solid fa-bars" onclick="openNav()"></i>
          </nav>
+
+         <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="overlay-content">
+               <a href="ourForest.php">Our Forest</a>
+               <a href="#">The Data</a>
+               <a href="about.html" class="currentPage">About</a>
+            </div>
+         </div>
       </header>
 
       <main>

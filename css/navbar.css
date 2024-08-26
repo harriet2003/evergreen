@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+html {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -5,11 +14,70 @@ nav {
     margin-bottom: 5rem;
 }
 
-nav h5 {
+nav a {
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0;
     text-transform: uppercase;
 }
 
 nav i {
     font-size: 1.5rem;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    background-color: #DBEDCC;
+    background-color: #DBEDCC;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.overlay a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #172A28;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.currentPage,
+.overlay a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    margin: 1rem;
+    right: 1rem;
+    font-size: 2.5rem;
+}
+
+/* Forest Page (special nav)*/
+
+.forestPage nav {
+    align-items: flex-start;
+}
+
+.forestPage nav a {
+    width: 50%;
+    font-size: 3rem;
+    font-weight: 600;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
 html {
     font-family: "Sora", sans-serif;
@@ -9,38 +9,40 @@ html {
 
 h1 {
     font-size: 4.5rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 h2 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
 h3 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
 h4 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h5 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h6 {
     font-size: 1.125rem;
+    font-weight: 400;
 }
 
 p {
     font-size: 1rem;
+    font-weight: 400;
 }
 
 a{
@@ -49,9 +51,10 @@ a{
     cursor: pointer;
 }
 
-.button {
+.button, .button2 {
     font-family: inherit;
     font-size: 1.25rem;
+    font-weight: 600;
     text-transform: uppercase;
     color: black;
     text-decoration: none;
@@ -74,12 +77,52 @@ a{
 }
 
 /* INTRO */
-.gradientBackground{
+.intro{
     color: white;
 }
 
 .progressBar i{
+  font-size: 1.125rem;
+}
+
+/* FOREST */
+
+.forestPage footer a{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.forestPage footer a:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.forestPage h6{
+    margin: 0;
+}
+
+#helpPopup i{
+    font-size: 1.5rem;
+    align-self: flex-end;
+}
+
+#helpPopup h6{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.questionnaire label{
     font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.result div p{
+    font-weight: 300;
+}
+
+#plantName{
+    transform: rotate(-90deg);
 }
 
 /* ABOUT */

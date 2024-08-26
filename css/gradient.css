@@ -1,4 +1,4 @@
-.gradientBackground {
+.intro {
     background: linear-gradient(300deg, #658f20,#172a28, #194923, #172a28);
     background-size: 500% 500%;
     animation: gradient-animation 15s ease infinite;
