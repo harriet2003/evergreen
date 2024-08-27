@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="css/styles.css" />
       <link rel="stylesheet" href="css/typography.css" />
       <link rel="stylesheet" href="css/gradient.css" />
-      <script src="js/script.js"></script>
+      <script src="js/script.js" defer></script>
       <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
    </head>
 
@@ -18,7 +18,7 @@
 
       <main class="introContent">
          <div class="progressBar" id="progressBar1">
-            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
@@ -26,18 +26,18 @@
          </div>
 
          <div class="introText">
-            <h5>
-               New Zealand's environment is special. <br />Having been isolated from the rest of the world for over 80 million years, unique nature
-               and wildlife forms have evolved to create the lush and vibrant Aotearoa we know today.
-               <!--Make this an array to swap out the text-->
+            <h5 id="content">
+
             </h5>
+
+            <a href="ourForest.php" class="button" id="introButton">Explore</a>
          </div>
       </main>
 
       <footer>
-         <div class="introFooterContent">
-            <i class="fa-solid fa-arrow-down arrow"></i>
-            <a href="final-intro.html" class="skip">Skip</a>
+         <div id="introFooterContent">
+            <i class="fa-solid fa-arrow-down" id="nextArrow"></i>
+            <a href="final-intro.html" id="skip">Skip</a>
          </div>
       </footer>
    </body>

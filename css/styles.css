@@ -116,8 +116,12 @@ header {
     gap: 1rem;
 }
 
-.currentCircle {
-    color: var(--salmon);
+
+.active {
+    color: var(--salmon); /* Color for active slide */
+}
+.completed {
+    color: var(--offwhite); /* Color for completed slides */
 }
 
 .intro footer {
@@ -128,18 +132,18 @@ header {
     padding-block: 2rem;
 }
 
-.introFooterContent {
+#introFooterContent {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.arrow {
+#nextArrow {
     font-size: 1.5rem;
 }
 
-.skip {
+#skip {
     padding-right: 2rem;
 }
 
@@ -350,6 +354,10 @@ form .button {
 
     .progressBar {
         flex-direction: column;
+    }
+
+    #introButton{
+        display: none;
     }
 
     /* FOREST PAGE */
