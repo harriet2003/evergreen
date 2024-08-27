@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +14,17 @@ session_start();
 
 <body class="forestPage">
    <header>
-      <nav>
-         <a href="ourForest.php">Our Forest</a>
+      <nav class="desktopNav">
+         <a href="ourForest.php" class="biggerTitle">Our Forest</a>
+         <div>
+            <a href="ourForest.php" class="currentPage">Our Forest</a>
+            <a href="#">The Data</a>
+            <a href="about.html">About</a>
+         </div>
+      </nav>
+
+      <nav class="mobileNav">
+         <a href="ourForest.php" class="biggerTitle">Our Forest</a>
          <i class="fa-solid fa-bars" onclick="openNav()"></i>
       </nav>
 
@@ -35,7 +40,10 @@ session_start();
    </header>
 
    <main>
-      <!--Seedlings here-->
+
+      <div class="seedlings">
+         <!--Seedlings here-->
+      </div>
 
       <div id="helpPopup">
          <i class="fa-solid fa-xmark" onclick="closeHelpPopup()"></i>

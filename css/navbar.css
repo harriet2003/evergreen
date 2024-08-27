@@ -7,6 +7,10 @@ html {
     font-style: normal;
 }
 
+.desktopNav {
+    display: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -29,7 +33,7 @@ nav i {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     right: 0;
     top: 0;
     background-color: #DBEDCC;
@@ -76,8 +80,45 @@ nav i {
     align-items: flex-start;
 }
 
-.forestPage nav a {
+.biggerTitle {
     width: 50%;
     font-size: 3rem;
     font-weight: 600;
+}
+
+
+/*DESKTOP LAYOUT*/
+@media screen and (width > 768px) {
+    .mobileNav {
+        display: none;
+    }
+
+    .desktopNav {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .navTitle {
+        font-size: 3rem;
+    }
+
+    .desktopNav div {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .desktopNav div a {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+        text-transform: none;
+    }
+
+    .desktopNav a:hover {
+        cursor: pointer;
+    }
+
+    .biggerTitle {
+        font-size: 4rem;
+    }
 }

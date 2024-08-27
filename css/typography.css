@@ -133,3 +133,33 @@ a{
 .actionBox p {
     font-size: 0.75rem;
 }
+
+/*DESKTOP LAYOUT*/
+@media screen and (width > 768px) {
+    h1{
+        font-size: 8rem;
+    }
+
+    h2{
+        font-size: 4rem;
+    }
+
+    h3{
+        font-size: 3rem;
+    }
+
+    .introText h5 {
+        width: 50%;
+        text-align: center;
+    }
+
+    /* ABOUT PAGE */
+    .actionBox h6{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .actionBox p {
+        font-size: 1rem;
+    }
+}

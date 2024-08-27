@@ -18,7 +18,16 @@ session_start();
 
 <body class="plantSeedlingPage">
     <header>
-        <nav>
+        <nav class="desktopNav">
+            <a href="ourForest.php" class="navTitle">Evergreen</a>
+            <div>
+                <a href="ourForest.php">Our Forest</a>
+                <a href="#">The Data</a>
+                <a href="about.html" class="currentPage">About</a>
+            </div>
+        </nav>
+
+        <nav class="mobileNav">
             <a href="ourForest.php">Evergreen</a>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </nav>

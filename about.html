@@ -13,7 +13,16 @@
 
    <body class="aboutPage">
       <header>
-         <nav>
+         <nav class="desktopNav">
+            <a href="ourForest.php" class="navTitle">Evergreen</a>
+            <div>
+               <a href="ourForest.php">Our Forest</a>
+               <a href="#">The Data</a>
+               <a href="about.html" class="currentPage">About</a>
+            </div>
+         </nav>
+
+         <nav class="mobileNav">
             <a href="ourForest.php">Evergreen</a>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
          </nav>
@@ -49,7 +58,7 @@
 
          <article>
             <h5>Don’t Just Talk the Talk</h5>
-            <p>
+            <p id="talkText">
                Sometimes we feel like we can’t enact change, but every action plants a seed for a better future. We’ve listed some simple things you
                can do to give back. Why not give one a go?
             </p>
