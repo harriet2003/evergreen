@@ -116,12 +116,15 @@ header {
     gap: 1rem;
 }
 
-
-.active {
-    color: var(--salmon); /* Color for active slide */
+.active,
+.currentCircle {
+    color: var(--salmon);
+    /* Color for active slide */
 }
+
 .completed {
-    color: var(--offwhite); /* Color for completed slides */
+    color: var(--offwhite);
+    /* Color for completed slides */
 }
 
 .intro footer {
@@ -215,9 +218,21 @@ header {
 .mobileSeedlingSelection {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileSeedlingSelection .selectionBoxes {
+    width: 100%;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.mobileSeedlingSelection a {
+    margin-top: 5rem;
 }
 
 .seedling div {
@@ -356,7 +371,7 @@ form .button {
         flex-direction: column;
     }
 
-    #introButton{
+    #introButton {
         display: none;
     }
 
@@ -370,6 +385,48 @@ form .button {
         height: auto;
         margin: 0 auto;
         padding-bottom: 4rem;
+    }
+
+    /* SEEDLINGS */
+    .mobileSeedlingSelection {
+        display: none;
+    }
+
+    .plantSeedlingPage main {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .desktopSeedlingSelection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktopSeedlingSelection .selectionBoxes {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .seedlings {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        height: fit-content;
+    }
+
+    .desktopSeedlingSelection a {
+        margin-block: 1rem;
+    }
+
+    .plantSeedlingPage .progressBar {
+        flex-direction: row;
+        gap: 1.5rem;
     }
 
     /* ABOUT PAGE */
