@@ -162,7 +162,12 @@ header {
     background-position: center;
     background-attachment: fixed;
     color: white;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+#forest {
+    height: 60vh;
+    margin-inline: 2rem;
 }
 
 .forestPage footer {
@@ -206,29 +211,32 @@ header {
     background-image: url(../images/forestBackgroundBlur.jpg);
 }
 
-.plantSeedlingPage main,
-.seedlingResult main {
-    height: 80vh;
+.plantSeedlingPage footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-inline: 2rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.plantSeedlingPage main {
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 .mobileSeedlingSelection {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.mobileSeedlingSelection .selectionBoxes {
-    width: 100%;
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .mobileSeedlingSelection a {
@@ -281,8 +289,28 @@ form .button {
     align-self: center;
 }
 
+.seedlingResult main {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .result {
     text-align: center;
+}
+
+.result div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.result img {
+    width: 50vw;
+    padding-bottom: 2rem;
 }
 
 .button2 {
@@ -326,6 +354,13 @@ form .button {
 .actionBox div {
     border: 1px solid white;
     aspect-ratio: 1/1;
+    display: flex;
+    place-content: center;
+}
+
+.actionBox img {
+    width: 66%;
+    filter: saturate(0) brightness(100);
 }
 
 .aboutPage footer {
@@ -376,9 +411,7 @@ form .button {
     }
 
     /* FOREST PAGE */
-    .seedlings {
-        height: 60vh;
-    }
+
 
     #helpPopup {
         width: 40vw;
@@ -394,21 +427,15 @@ form .button {
 
     .plantSeedlingPage main {
         display: flex;
+        flex-direction: column;
         justify-content: flex-start;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .desktopSeedlingSelection {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desktopSeedlingSelection .selectionBoxes {
         width: 80%;
+        margin: 0 auto;
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
@@ -428,6 +455,51 @@ form .button {
         flex-direction: row;
         gap: 1.5rem;
     }
+
+    fieldset {
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .questionLayout input {
+        width: 30vw;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+        text-align: center;
+        margin-block: 3rem;
+    }
+
+
+    .result {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .result div:nth-child(2) {
+        text-align: left;
+        width: 33vw;
+
+        .result div:nth-child(2) h6 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .result img {
+        width: 20vw;
+        padding-bottom: 0;
+    }
+
+    .buttonOptions {
+        margin-bottom: 3rem;
+    }
+
 
     /* ABOUT PAGE */
     .aboutPage article:first-child {

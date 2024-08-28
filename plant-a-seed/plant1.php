@@ -24,7 +24,7 @@
         </nav>
 
         <nav class="mobileNav">
-            <a href="ourForest.php">Evergreen</a>
+            <a href="../ourForest.php">Evergreen</a>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </nav>
 
@@ -32,9 +32,9 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
             <div class="overlay-content">
-                <a href="ourForest.php">Our Forest</a>
+                <a href="../ourForest.php">Our Forest</a>
                 <a href="#">The Data</a>
-                <a href="about.html">About</a>
+                <a href="../about.html">About</a>
             </div>
         </div>
     </header>
@@ -44,59 +44,51 @@
 
         <!--MOBILE-->
         <div class="mobileSeedlingSelection">
-            <div class="selectionBoxes">
-                <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="seedling">
+                <div>
+                    <img src="">
+                </div>
+                <h6>Mānuka</h6>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <!--DESKTOP-->
+        <div class="desktopSeedlingSelection">
+            <i class="fa-solid fa-arrow-left"></i>
+            <div class="seedlings">
+                <div class="seedling">
+                    <div>
+                        <img src="">
+                    </div>
+                    <h6>Pohutukawa</h6>
+                </div>
                 <div class="seedling">
                     <div>
                         <img src="">
                     </div>
                     <h6>Mānuka</h6>
                 </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-
-            <a href="plant2.php" class="button">Next</a>
-        </div>
-
-        <!--DESKTOP-->
-        <div class="desktopSeedlingSelection">
-            <div class="selectionBoxes">
-                <i class="fa-solid fa-arrow-left"></i>
-                <div class="seedlings">
-                    <div class="seedling">
-                        <div>
-                            <img src="">
-                        </div>
-                        <h6>Pohutukawa</h6>
+                <div class="seedling">
+                    <div>
+                        <img src="">
                     </div>
-                    <div class="seedling">
-                        <div>
-                            <img src="">
-                        </div>
-                        <h6>Mānuka</h6>
-                    </div>
-                    <div class="seedling">
-                        <div>
-                            <img src="">
-                        </div>
-                        <h6>Fern</h6>
-                    </div>
+                    <h6>Fern</h6>
                 </div>
-                <i class="fa-solid fa-arrow-right"></i>
             </div>
-
-            <a href="plant2.php" class="button">Next</a>
+            <i class="fa-solid fa-arrow-right"></i>
         </div>
-
+    </main>
+    <footer>
+        <a href="plant2.php" class="button">Next</a>
         <div class="progressBar">
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
         </div>
-
-
-    </main>
+    </footer>
 </body>
 
 </html>

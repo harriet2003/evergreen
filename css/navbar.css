@@ -96,6 +96,7 @@ nav i {
     .desktopNav {
         display: flex;
         align-items: flex-start;
+        margin-bottom: 0;
     }
 
     .navTitle {
@@ -116,6 +117,8 @@ nav i {
 
     .desktopNav a:hover {
         cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
     }
 
     .biggerTitle {

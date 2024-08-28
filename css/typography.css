@@ -81,7 +81,7 @@ a{
     color: white;
 }
 
-.progressBar i, .progressBar2 i{
+.progressBar i{
   font-size: 1.125rem;
 }
 
@@ -112,6 +112,10 @@ a{
     margin-bottom: 2rem;
 }
 
+.plantSeedlingPage main h5{
+    text-align: center;
+}
+
 .questionnaire label{
     font-size: 1.125rem;
     font-weight: 500;
@@ -123,6 +127,7 @@ a{
 
 #plantName{
     transform: rotate(-90deg);
+    margin: 0;
 }
 
 /* ABOUT */
@@ -153,14 +158,30 @@ a{
         text-align: center;
     }
 
-    .plantSeedlingPage main h5{
+    .plantSeedlingPage main h5, .seedlingResult h5{
         font-size: 2rem;
         margin-top: 0;
+
     }
 
     .desktopSeedlingSelection i{
         font-size: 1.5rem;
     }
+
+    .question{
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .result div:nth-child(2) h6{
+        font-size: 1.5rem;
+        margin-block: 2rem;
+    }
+
+    .result div:nth-child(2) p{
+        font-size: 1.125rem;
+    }
+
 
     /* ABOUT PAGE */
     .actionBox h6{

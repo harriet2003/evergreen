@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,25 +15,26 @@ session_start();
 <body class="seedlingResult">
     <header>
         <nav class="desktopNav">
-            <a href="ourForest.php" class="navTitle">Evergreen</a>
+            <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
-                <a href="ourForest.php">Our Forest</a>
+                <a href="../ourForest.php">Our Forest</a>
                 <a href="#">The Data</a>
-                <a href="about.html" class="currentPage">About</a>
+                <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
 
         <nav class="mobileNav">
-            <a href="ourForest.php">Evergreen</a>
+            <a href="../ourForest.php">Evergreen</a>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </nav>
 
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
             <div class="overlay-content">
-                <a href="ourForest.php">Our Forest</a>
+                <a href="../ourForest.php">Our Forest</a>
                 <a href="#">The Data</a>
-                <a href="about.html">About</a>
+                <a href="../about.html">About</a>
             </div>
         </div>
     </header>
@@ -48,7 +45,8 @@ session_start();
         <div class="result">
             <div>
                 <p id="plantName">Manuka</p>
-                <img src="">
+                <img src="../images/illustrations/manuka.svg" alt="image of your seedling">
+                <p id="plantName" style="opacity: 0;">Manuka</p>
             </div>
             <div>
                 <p>What Nature Means To Me</p>
@@ -62,15 +60,6 @@ session_start();
             <a href="../ourForest.php" class="button2">Plant</a>
             <a href="#" class="button2">Share</a>
         </div>
-
-
-        <div class="progressBar">
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle currentCircle"></i>
-        </div>
-
     </main>
 </body>
 

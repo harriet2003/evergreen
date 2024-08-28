@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,16 +15,16 @@ session_start();
 <body class="plantSeedlingPage questionLayout">
     <header>
         <nav class="desktopNav">
-            <a href="ourForest.php" class="navTitle">Evergreen</a>
+            <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
-                <a href="ourForest.php">Our Forest</a>
+                <a href="../ourForest.php">Our Forest</a>
                 <a href="#">The Data</a>
-                <a href="about.html" class="currentPage">About</a>
+                <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
 
         <nav class="mobileNav">
-            <a href="ourForest.php">Evergreen</a>
+            <a href="../ourForest.php">Evergreen</a>
             <i class="fa-solid fa-bars" onclick="openNav()"></i>
         </nav>
 
@@ -36,9 +32,9 @@ session_start();
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
             <div class="overlay-content">
-                <a href="ourForest.php">Our Forest</a>
+                <a href="../ourForest.php">Our Forest</a>
                 <a href="#">The Data</a>
-                <a href="about.html">About</a>
+                <a href="../about.html">About</a>
             </div>
         </div>
     </header>
@@ -46,25 +42,24 @@ session_start();
     <main>
         <form>
             <fieldset>
-                <label for="userComment">
-                    Nature can mean so many different things to all of us.<br>
+                <h6 class="question">
+                    Nature can mean so many different things to all of us.
                     Why do you love nature, what inspires you to protect our forest?
-                </label>
+                </h6>
                 <input type="text" id="userComment" name="userComment" placeholder="type here" required>
             </fieldset>
-            <a href="plant3.php" class="button">Next</a>
         </form>
+    </main>
 
-
-
+    <footer>
+        <a href="plant3.php" class="button">Next</a>
         <div class="progressBar">
-            <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
         </div>
-
-    </main>
+    </footer>
 </body>
 
 </html>

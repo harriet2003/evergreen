@@ -8,7 +8,8 @@
    <link rel="stylesheet" href="css/styles.css" />
    <link rel="stylesheet" href="css/typography.css" />
    <link rel="stylesheet" href="css/navbar.css">
-   <script src="js/script.js"></script>
+   <script src="js/script.js" defer></script>
+   <!--<script src="js/forestPage.js" defer></script>-->
    <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -41,7 +42,7 @@
 
    <main>
 
-      <div class="seedlings">
+      <div id="forest">
          <!--Seedlings here-->
       </div>
 
