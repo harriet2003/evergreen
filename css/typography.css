@@ -45,13 +45,14 @@ p {
     font-weight: 400;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-.button, .button2 {
+.button,
+.button2 {
     font-family: inherit;
     font-size: 1.25rem;
     font-weight: 600;
@@ -77,61 +78,65 @@ a{
 }
 
 /* INTRO */
-.intro{
+.intro {
     color: white;
 }
 
-.progressBar i{
-  font-size: 1.125rem;
+.progressBar i {
+    font-size: 1.125rem;
 }
 
 /* FOREST */
 
-.forestPage footer a{
-    font-size: 2rem;
+.forestPage footer a {
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 
-.forestPage footer a:hover{
+.forestPage footer a:hover {
     text-decoration: underline;
     text-underline-offset: 0.5rem;
 }
 
-.forestPage h6{
+.forestPage h6 {
     margin: 0;
 }
 
-#helpPopup i{
+#helpPopup i {
     font-size: 1.5rem;
     align-self: flex-end;
 }
 
-#helpPopup h6{
+#helpPopup h6 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
 }
 
-.plantSeedlingPage main h5{
+.plantSeedlingPage main h5 {
     text-align: center;
 }
 
-.questionnaire label{
+.questionnaire label {
     font-size: 1.125rem;
     font-weight: 500;
 }
 
-.result div p{
+input[type=text]{
+    color: white;
+}
+
+.result div p {
     font-weight: 300;
 }
 
-#plantName{
+#plantName {
     transform: rotate(-90deg);
     margin: 0;
 }
 
 /* ABOUT */
-.actionBox h6{
+.actionBox h6 {
     margin-block: 1rem 0.5rem;
 }
 
@@ -141,15 +146,15 @@ a{
 
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
-    h1{
+    h1 {
         font-size: 8rem;
     }
 
-    h2{
+    h2 {
         font-size: 4rem;
     }
 
-    h3{
+    h3 {
         font-size: 3rem;
     }
 
@@ -158,33 +163,34 @@ a{
         text-align: center;
     }
 
-    .plantSeedlingPage main h5, .seedlingResult h5{
+    .plantSeedlingPage main h5,
+    .seedlingResult h5 {
         font-size: 2rem;
         margin-top: 0;
 
     }
 
-    .desktopSeedlingSelection i{
+    .desktopSeedlingSelection i {
         font-size: 1.5rem;
     }
 
-    .question{
+    .question {
         font-size: 1.25rem;
         margin: 0;
     }
 
-    .result div:nth-child(2) h6{
+    .result div:nth-child(2) h6 {
         font-size: 1.5rem;
         margin-block: 2rem;
     }
 
-    .result div:nth-child(2) p{
+    .result div:nth-child(2) p {
         font-size: 1.125rem;
     }
 
 
     /* ABOUT PAGE */
-    .actionBox h6{
+    .actionBox h6 {
         font-size: 1.25rem;
         font-weight: 500;
     }

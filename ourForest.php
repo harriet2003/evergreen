@@ -11,6 +11,7 @@
    <script src="js/script.js" defer></script>
    <!--<script src="js/forestPage.js" defer></script>-->
    <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body class="forestPage">
@@ -64,7 +65,14 @@
    </main>
 
    <footer>
-      <a href="plant-a-seed/plant1.php">Plant+</a>
+      <div>
+         <dotlottie-player id="arrow" src="https://lottie.host/05f54aa3-04dd-4239-9298-87fdff775ee2/HW4ndqeLyr.json"
+            background="transparent" speed="1" style="width: 4rem; height: 4rem; transform: rotate(180deg)" loop
+            autoplay></dotlottie-player>
+
+         <a href="plant-a-seed/plant1.php">Plant+</a>
+      </div>
+
       <h6 onclick="openHelpPopup()">Help</h6>
    </footer>
 </body>

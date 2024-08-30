@@ -31,13 +31,12 @@ header {
 
 .button {
     padding: 0.75rem 1.25rem;
-    min-width: 120px;
+    min-width: 150px;
     background-color: white;
     border: none;
 }
 
-.button:hover,
-.button2:hover {
+.button:hover {
     background-color: var(--lightGreen);
     transition-duration: 0.5s;
     cursor: pointer;
@@ -131,23 +130,12 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-block: 2rem;
-}
-
-#introFooterContent {
-    width: 50%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 2rem;
 }
 
-#nextArrow {
-    font-size: 1.5rem;
-}
-
-#skip {
-    padding-right: 2rem;
+#nextArrow:hover {
+    cursor: pointer;
 }
 
 /* FOREST PAGE */
@@ -174,11 +162,22 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding-inline: 2rem;
     margin-bottom: 2rem;
     position: fixed;
     bottom: 0;
+}
+
+.forestPage footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#arrow {
+    opacity: 0;
 }
 
 #helpPopup {
@@ -211,6 +210,14 @@ header {
     background-image: url(../images/forestBackgroundBlur.jpg);
 }
 
+.plantSeedlingPage main {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .plantSeedlingPage footer {
     width: 100%;
     display: flex;
@@ -223,34 +230,76 @@ header {
     bottom: 0;
 }
 
-.plantSeedlingPage main {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.chooseSeedling main{
+    height: 100vh;
+    gap: 2rem;
+    justify-content: flex-start;
 }
 
 .mobileSeedlingSelection {
-    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.mobileSeedlingSelection a {
-    margin-top: 5rem;
-}
-
-.seedling div {
-    border: 1px solid white;
-    aspect-ratio: 1/1;
+    gap: 2rem;
 }
 
 .desktopSeedlingSelection {
     display: none;
 }
+
+
+/* CAROUSEL */
+
+.carousel-container {
+    margin-top: 3rem;
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    aspect-ratio: 1/1;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    place-content: center;
+}
+
+.carousel-item img {
+    width: 66%;
+    display: block;
+}
+
+.prev-btn,
+.next-btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding-top: 3rem;
+}
+
+
+#carousel-caption {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.carousel-item.selected {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 .questionLayout {
     display: flex;
@@ -311,14 +360,6 @@ form .button {
 .result img {
     width: 50vw;
     padding-bottom: 2rem;
-}
-
-.button2 {
-    padding: 0.75rem 1.25rem;
-    min-width: 60px;
-    background-color: white;
-    border: none;
-    margin-inline: 0.75rem;
 }
 
 

@@ -54,8 +54,8 @@
     <footer>
         <a href="plant3.php" class="button">Next</a>
         <div class="progressBar">
-            <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
         </div>

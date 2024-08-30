@@ -57,8 +57,7 @@
         </div>
 
         <div class="buttonOptions">
-            <a href="../ourForest.php" class="button2">Plant</a>
-            <a href="#" class="button2">Share</a>
+            <a href="../ourForest.php" class="button">Plant</a>
         </div>
     </main>
 </body>

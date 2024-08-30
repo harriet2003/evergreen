@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="css/gradient.css" />
       <script src="js/script.js" defer></script>
       <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
    </head>
 
    <body class="gradientBackground intro">
@@ -33,10 +34,18 @@
       </main>
 
       <footer>
-         <div id="introFooterContent">
-            <i class="fa-solid fa-arrow-down" id="nextArrow"></i>
-            <a href="ourForest.php" id="skip">Skip</a>
-         </div>
+         <p style="opacity: 0;">Skip</p>
+
+         <dotlottie-player
+            id="nextArrow"
+            src="https://lottie.host/05f54aa3-04dd-4239-9298-87fdff775ee2/HW4ndqeLyr.json"
+            background="transparent"
+            speed="1"
+            style="width: 4rem; height: 4rem; transform: rotate(180deg)"
+            loop
+            autoplay></dotlottie-player>
+
+         <a href="ourForest.php" id="skip">Skip</a>
       </footer>
    </body>
 </html>

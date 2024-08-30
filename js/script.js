@@ -1,14 +1,14 @@
 /* INTRO ARRAY */
 const introSlides = [
-   "New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and wildlife forms have evolved to create the lush and vibrant Aotearoa we know today.",
+   "New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and wildlife forms have evolved to create the Aotearoa we know today.",
 
-   "These natural habitats foster biodiversity, improve water and soil quality and act as carbon sinks, producing oxygen and absorbing carbon dioxide from the atmosphere.",
+   "These natural habitats foster biodiversity, improve water and soil quality and act as carbon sinks, absorbing carbon dioxide from the atmosphere.",
 
    "Since Europeans first settled here 200 years ago, we’ve seen terrifyingly rapid changes to our forests.  The consequences of long-overlooked climate destruction is starting to show.",
 
-   "Our nature is important to us, not just in mitigating the impacts of climate change, but also for our physical and mental well-being. Our green spaces provide connection, memories and joy.",
+   "Our nature is important, not just in mitigating the impacts of climate change, but also for our physical and mental well-being. Our green spaces provide connection, memories and joy.",
 
-   "Protecting and preserving Aotearoa’s the natural world has never been more crucial than now. We have the ability and responsibility to shape our future and to create a better world, one seed at a time.",
+   "Protecting and preserving Aotearoa’s the natural world has never been more crucial than now. We have the ability and responsibility to shape our future and create a better world, one seed at a time.",
 ];
 
 // Initialize the current slide index
@@ -79,6 +79,7 @@ circles.forEach((circle) => {
    circle.addEventListener("click", handleCircleClick);
 });
 
+
 /* CURTAIN MENU */
 function openNav() {
    document.getElementById("myNav").style.width = "100%";
@@ -95,4 +96,5 @@ function openHelpPopup() {
 
 function closeHelpPopup() {
    document.getElementById("helpPopup").style.opacity = "0%";
+   document.getElementById("arrow").style.opacity = "100%";
 }

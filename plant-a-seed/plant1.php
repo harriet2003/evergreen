@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="../css/typography.css" />
     <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/script.js" defer></script>
+    <script src="../js/seedling.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="plantSeedlingPage">
+<body class="plantSeedlingPage chooseSeedling">
     <header>
         <nav class="desktopNav">
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
@@ -44,19 +45,40 @@
 
         <!--MOBILE-->
         <div class="mobileSeedlingSelection">
-            <i class="fa-solid fa-arrow-left"></i>
-            <div class="seedling">
-                <div>
-                    <img src="">
+
+            <i class="fa-solid fa-arrow-left prev-btn"></i>
+
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item" id="fern">
+                        <img src="../images/illustrations/fern.svg" alt="image of fern seedling">
+                    </div>
+                    <div class="carousel-item" id="pohutukawa">
+                        <img src="../images/illustrations/pohutakawa.svg" alt="image of pohutukawa seedling">
+                    </div>
+                    <div class="carousel-item" id="kowhai">
+                        <img src="../images/illustrations/kowhai.svg" alt="image of kowhai seedling">
+                    </div>
+                    <div class="carousel-item" id="manuka">
+                        <img src="../images/illustrations/manuka.svg" alt="image of manuka seedling">
+                    </div>
+                    <div class="carousel-item" id="rata">
+                        <img src="../images/illustrations/rata.svg" alt="image of rata seedling">
+                    </div>
+                    <div class="carousel-item" id="koru">
+                        <img src="../images/illustrations/koru.svg" alt="image of koru seedling">
+                    </div>
                 </div>
-                <h6>Mānuka</h6>
             </div>
-            <i class="fa-solid fa-arrow-right"></i>
+
+            <i class="fa-solid fa-arrow-right next-btn"></i>
         </div>
+
+        <p class="carousel-caption">Fern</p> <!-- Caption below the carousel -->
 
         <!--DESKTOP-->
         <div class="desktopSeedlingSelection">
-            <i class="fa-solid fa-arrow-left"></i>
+
             <div class="seedlings">
                 <div class="seedling">
                     <div>
@@ -77,11 +99,17 @@
                     <h6>Fern</h6>
                 </div>
             </div>
-            <i class="fa-solid fa-arrow-right"></i>
+
         </div>
     </main>
+
     <footer>
-        <a href="plant2.php" class="button">Next</a>
+        <form action="plant2.php">
+            <input type="hidden" name="selectedImage" id="selectedImage">
+            <button type="submit" class="button submitSeedling">Next</button>
+        </form>
+
+        <!--<a href="plant2.php" class="button">Next</a>-->
         <div class="progressBar">
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
