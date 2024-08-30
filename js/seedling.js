@@ -2,11 +2,10 @@ const carousel = document.querySelector(".carousel");
 const carouselItems = document.querySelectorAll(".carousel-item");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const caption = document.querySelector('.carousel-caption');
+const caption = document.querySelector(".carousel-caption");
 
 const captions = ["Fern", "Pohutukawa", "Kōwhai", "Mānuka", "Rata", "Koru"]; // List of captions
 let currentIndex = 0;
-
 
 function updateCarousel() {
    const itemWidth = document.querySelector(".carousel-item").offsetWidth;

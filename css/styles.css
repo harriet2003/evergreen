@@ -230,21 +230,17 @@ header {
     bottom: 0;
 }
 
-.chooseSeedling main{
+.chooseSeedling main {
     height: 100vh;
     gap: 2rem;
     justify-content: flex-start;
 }
 
-.mobileSeedlingSelection {
+.seedlingSelection {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-}
-
-.desktopSeedlingSelection {
-    display: none;
 }
 
 
@@ -290,7 +286,6 @@ header {
     padding-top: 3rem;
 }
 
-
 #carousel-caption {
     text-align: center;
     font-size: 1.2em;
@@ -299,7 +294,6 @@ header {
 .carousel-item.selected {
     background-color: rgba(255, 255, 255, 0.2);
 }
-
 
 .questionLayout {
     display: flex;
@@ -453,7 +447,6 @@ form .button {
 
     /* FOREST PAGE */
 
-
     #helpPopup {
         width: 40vw;
         height: auto;
@@ -462,9 +455,6 @@ form .button {
     }
 
     /* SEEDLINGS */
-    .mobileSeedlingSelection {
-        display: none;
-    }
 
     .plantSeedlingPage main {
         display: flex;
@@ -473,28 +463,30 @@ form .button {
         gap: 1rem;
     }
 
-    .desktopSeedlingSelection {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .seedlings {
-        display: flex;
-        align-items: center;
-        gap: 2.5rem;
-        height: fit-content;
-    }
-
-    .desktopSeedlingSelection a {
-        margin-block: 1rem;
-    }
-
     .plantSeedlingPage .progressBar {
         flex-direction: row;
         gap: 1.5rem;
+    }
+
+    .chooseSeedling main {
+        height: 50vh;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    .carousel-container {
+        margin-top: 0;
+        width: 90%;
+        max-width: 220px;
+    }
+
+    .seedlingSelection{
+        width: 33vw;
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding-top: 0;
     }
 
     fieldset {

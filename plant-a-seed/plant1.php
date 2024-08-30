@@ -44,7 +44,7 @@
         <h5 class="capitalise">Select a Seedling</h5>
 
         <!--MOBILE-->
-        <div class="mobileSeedlingSelection">
+        <div class="seedlingSelection">
 
             <i class="fa-solid fa-arrow-left prev-btn"></i>
 
@@ -75,32 +75,6 @@
         </div>
 
         <p class="carousel-caption">Fern</p> <!-- Caption below the carousel -->
-
-        <!--DESKTOP-->
-        <div class="desktopSeedlingSelection">
-
-            <div class="seedlings">
-                <div class="seedling">
-                    <div>
-                        <img src="">
-                    </div>
-                    <h6>Pohutukawa</h6>
-                </div>
-                <div class="seedling">
-                    <div>
-                        <img src="">
-                    </div>
-                    <h6>Mānuka</h6>
-                </div>
-                <div class="seedling">
-                    <div>
-                        <img src="">
-                    </div>
-                    <h6>Fern</h6>
-                </div>
-            </div>
-
-        </div>
     </main>
 
     <footer>
