@@ -181,6 +181,7 @@ header {
 }
 
 #helpPopup {
+    opacity: 0;
     width: 80vw;
     position: fixed;
     top: 50%;
@@ -241,6 +242,10 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+}
+
+.desktopProgress {
+    display: none;
 }
 
 
@@ -474,13 +479,26 @@ form .button {
         justify-content: flex-start;
     }
 
+    .desktopProgress {
+        display: flex;
+        flex-direction: column !important;
+        position: fixed;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mobileProgress {
+        display: none;
+    }
+
     .carousel-container {
         margin-top: 0;
         width: 90%;
         max-width: 220px;
     }
 
-    .seedlingSelection{
+    .seedlingSelection {
         width: 33vw;
     }
 

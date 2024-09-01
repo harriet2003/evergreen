@@ -19,7 +19,6 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
@@ -34,7 +33,6 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html">About</a>
             </div>
         </div>
@@ -43,7 +41,6 @@
     <main>
         <h5 class="capitalise">Select a Seedling</h5>
 
-        <!--MOBILE-->
         <div class="seedlingSelection">
 
             <i class="fa-solid fa-arrow-left prev-btn"></i>
@@ -74,6 +71,13 @@
             <i class="fa-solid fa-arrow-right next-btn"></i>
         </div>
 
+        <div class="progressBar desktopProgress">
+            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+        </div>
+
         <p class="carousel-caption">Fern</p> <!-- Caption below the carousel -->
     </main>
 
@@ -83,8 +87,7 @@
             <button type="submit" class="button submitSeedling">Next</button>
         </form>
 
-        <!--<a href="plant2.php" class="button">Next</a>-->
-        <div class="progressBar">
+        <div class="progressBar mobileProgress">
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>

@@ -88,13 +88,3 @@ function openNav() {
 function closeNav() {
    document.getElementById("myNav").style.width = "0%";
 }
-
-/* HELP POPUP */
-function openHelpPopup() {
-   document.getElementById("helpPopup").style.opacity = "100%";
-}
-
-function closeHelpPopup() {
-   document.getElementById("helpPopup").style.opacity = "0%";
-   document.getElementById("arrow").style.opacity = "100%";
-}

@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="css/typography.css" />
    <link rel="stylesheet" href="css/navbar.css">
    <script src="js/script.js" defer></script>
-   <!--<script src="js/forestPage.js" defer></script>-->
+   <script src="js/forestPage.js" defer></script>
    <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
@@ -20,7 +20,6 @@
          <a href="ourForest.php" class="biggerTitle">Our Forest</a>
          <div>
             <a href="ourForest.php" class="currentPage">Our Forest</a>
-            <a href="#">The Data</a>
             <a href="about.html">About</a>
          </div>
       </nav>
@@ -35,7 +34,7 @@
 
          <div class="overlay-content">
             <a href="ourForest.php" class="currentPage">Our Forest</a>
-            <a href="#">The Data</a>
+
             <a href="about.html">About</a>
          </div>
       </div>
@@ -47,9 +46,9 @@
          <!--Seedlings here-->
       </div>
 
-      <div id="helpPopup">
+      <div id="helpPopup" class="modal">
          <i class="fa-solid fa-xmark" onclick="closeHelpPopup()"></i>
-         <article>
+         <article class="modal-content">
             <h6>How to explore</h6>
             <p>Welcome to Our Forest, Our Ngāherehere.
             </p>
@@ -70,10 +69,10 @@
             background="transparent" speed="1" style="width: 4rem; height: 4rem; transform: rotate(180deg)" loop
             autoplay></dotlottie-player>
 
-         <a href="plant-a-seed/plant1.php">Plant+</a>
+         <a href="plant-a-seed/plant1.php" id="plantButton">Plant+</a>
       </div>
 
-      <h6 onclick="openHelpPopup()">Help</h6>
+      <h6 onclick="openHelpPopup()" class="popup">Help</h6>
    </footer>
 </body>
 

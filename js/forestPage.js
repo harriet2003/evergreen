@@ -1,21 +1,43 @@
-/* document.addEventListener("DOMContentLoaded", function() {
-    alert("JavaScript is running!"); // This should show an alert when the page loads
-    console.log("JavaScript is working!"); // This should appear in the browser's console
- 
-    const container = document.getElementById('forest');
-    
-    const testImage = document.createElement('img');
-    testImage.src = './images/illustrations/fern.svg'; // Adjust the path if necessary
-    testImage.style.position = 'absolute';
-    testImage.style.width = '100px';
-    testImage.style.height = 'auto';
-    testImage.style.top = '50px';
-    testImage.style.left = '50px';
- 
-    container.appendChild(testImage);
- }); */
+/* Modal Popup Check */
+document.addEventListener("DOMContentLoaded", function () {
+   // Check if the modal has been shown before
+   if (!sessionStorage.getItem("modalShown")) {
+      // Show the modal
+      document.getElementById("helpPopup").style.opacity = "100%";
 
- /* RANDOM FOREST */
+      // Set a flag in sessionStorage to indicate the modal has been shown
+      sessionStorage.setItem("modalShown", "true");
+   }
+});
+
+function openHelpPopup() {
+   document.getElementById("helpPopup").style.opacity = "100%";
+}
+
+function closeHelpPopup() {
+   document.getElementById("helpPopup").style.opacity = "0%";
+   document.getElementById("arrow").style.opacity = "100%";
+}
+
+/* Plant+ Click Check */
+document.addEventListener("DOMContentLoaded", function () {
+   // Check if the button has been clicked in this session
+   if (!sessionStorage.getItem("buttonClicked")) {
+      // Show the arrow icon
+      document.getElementById("arrow").style.opacity = "100%";
+   }
+
+   // Add event listener for button click
+   document.getElementById("plantButton").addEventListener("click", function () {
+      // Hide the arrow icon
+      document.getElementById("arrow").style.opacity = "0%";
+
+      // Set a flag in sessionStorage to indicate the button has been clicked
+      sessionStorage.setItem("buttonClicked", "true");
+   });
+});
+
+/* RANDOM FOREST
 const svgFiles = [
    "./images/Illustrations/fern.svg",
    "./images/Illustrations/koru.svg",
@@ -56,4 +78,4 @@ function populateBackground() {
    }
 }
 
-window.onload = populateBackground;
+window.onload = populateBackground;*/

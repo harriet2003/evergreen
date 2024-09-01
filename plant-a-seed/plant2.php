@@ -18,7 +18,6 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
@@ -33,7 +32,6 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html">About</a>
             </div>
         </div>
@@ -49,11 +47,18 @@
                 <input type="text" id="userComment" name="userComment" placeholder="type here" required>
             </fieldset>
         </form>
+
+        <div class="progressBar desktopProgress">
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+        </div>
     </main>
 
     <footer>
         <a href="plant3.php" class="button">Next</a>
-        <div class="progressBar">
+        <div class="progressBar mobileProgress">
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>

@@ -18,7 +18,6 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
@@ -33,7 +32,6 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html">About</a>
             </div>
         </div>
@@ -59,6 +57,7 @@
         <div class="buttonOptions">
             <a href="../ourForest.php" class="button">Plant</a>
         </div>
+
     </main>
 </body>
 

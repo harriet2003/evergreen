@@ -18,7 +18,6 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html" class="currentPage">About</a>
             </div>
         </nav>
@@ -33,7 +32,6 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="#">The Data</a>
                 <a href="../about.html">About</a>
             </div>
         </div>
@@ -49,13 +47,19 @@
                 <input type="text" id="userName" name="userName" placeholder="What is your name? (optional)">
                 <input type="text" id="userLocation" name="userLocation" placeholder="Where are you from? (optional)">
             </fieldset>
-
         </form>
+
+        <div class="progressBar desktopProgress">
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
+        </div>
     </main>
     <footer>
         <a href="plant4.php" class="button">Next</a>
-        <div class="progressBar">
-            <i class="fa-solid fa-circle "></i>
+        <div class="progressBar mobileProgress">
+            <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle currentCircle"></i>
             <i class="fa-solid fa-circle"></i>

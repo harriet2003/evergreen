@@ -126,6 +126,10 @@ input[type=text]{
     color: white;
 }
 
+.question {
+    margin-top: 0;
+}
+
 .result div p {
     font-weight: 300;
 }
