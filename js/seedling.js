@@ -42,3 +42,6 @@ carouselItems.forEach((item, index) => {
       });
    });
 });
+
+
+

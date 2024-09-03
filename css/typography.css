@@ -122,8 +122,9 @@ a {
     font-weight: 500;
 }
 
-input[type=text]{
+input {
     color: white;
+    font-size: 1rem;
 }
 
 .question {
