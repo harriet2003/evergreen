@@ -2,6 +2,11 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
+// Goes back to seedling selection page
+document.getElementById("prevBtn1").addEventListener("click", function () {
+   window.location.href = "../plant-a-seed/plant1.php";
+});
+
 function showTab(n) {
    // This function will display the specified tab of the form ...
    var x = document.getElementsByClassName("tab");
@@ -9,11 +14,17 @@ function showTab(n) {
    // ... and fix the Previous/Next buttons:
    if (n == 0) {
       document.getElementById("prevBtn").style.display = "none";
+      document.getElementById("prevBtn1").style.display = "block";
+      document.getElementById("seedQestion2").style.color = "#fe9a66";
+      document.getElementById("seedQestion3").style.color = "#F7F7F7";
    } else {
       document.getElementById("prevBtn").style.display = "inline";
    }
    if (n == x.length - 1) {
       document.getElementById("nextBtn").innerHTML = "Submit";
+      document.getElementById("prevBtn1").style.display = "none";
+      document.getElementById("seedQestion2").style.color = "#F7F7F7";
+      document.getElementById("seedQestion3").style.color = "#fe9a66";
    } else {
       document.getElementById("nextBtn").innerHTML = "Next";
    }
@@ -32,7 +43,6 @@ function nextPrev(n) {
    if (currentTab >= x.length) {
       //...the form gets submitted:
       document.getElementById("plantSeedling").submit();
-      window.location.href = "plantResult.php";
       return false;
    }
    // Otherwise, display the correct tab:
@@ -59,4 +69,3 @@ function validateForm() {
    }
    return valid; // return the valid status
 }
-

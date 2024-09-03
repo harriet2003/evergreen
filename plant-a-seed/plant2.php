@@ -40,7 +40,7 @@
     </header>
 
     <main>
-        <form id="plantSeedling" action="">
+        <form id="plantSeedling" action="" method="POST">
 
             <div class="tab">
                 <h6 class="question">
@@ -59,7 +59,7 @@
                 <input type="text" id="userName" name="userName" placeholder="What is your name? (optional)"
                     oninput="this.className = ''">
 
-                <input list="cities" id="city-select" name="userLocation" placeholder="Where are you from? (optional)"
+                <input list="cities" id="city-select" name="city" placeholder="Where are you from? (optional)"
                     oninput="this.className = ''">
 
                 <datalist id="cities">
@@ -68,15 +68,18 @@
             </div>
 
             <div class="formButtons">
+                <button type="button" id="prevBtn1" onclick="backToSeedling()" class="button">Back</button>
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="button">Back</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)" class="button">Next</button>
             </div>
+
+
         </form>
 
         <div class="progressBar desktopProgress">
             <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle currentCircle"></i>
-            <i class="fa-solid fa-circle"></i>
+            <i id="seedQestion2" class="fa-solid fa-circle"></i>
+            <i id="seedQestion3" class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
         </div>
     </main>
