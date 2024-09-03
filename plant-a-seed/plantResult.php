@@ -49,9 +49,9 @@
             </div>
             <div>
                 <p>What Nature Means To Me</p>
-                <h6>I love walking through the botanic gardens and seeing all the flowers</h6>
-                <p>Ava Williams<br>
-                    Wellington</p>
+                <h6 id="outputUserComment"></h6>
+                <p id="outputUserName"></p>
+                <p id="outputUserLocation"></p>
             </div>
         </div>
 
@@ -60,6 +60,18 @@
         </div>
 
     </main>
+
+    <script>
+        // Retrieve values from sessionStorage
+        const userComment = sessionStorage.getItem("userComment");
+        const userName = sessionStorage.getItem("userName");
+        const userLocation = sessionStorage.getItem("userLocation");
+
+        // Display the values
+        document.getElementById("outputUserComment").textContent = userComment || 'Not provided';
+        document.getElementById("outputUserName").textContent = userName || 'Not provided';
+        document.getElementById("outputUserLocation").textContent = userLocation || 'Not provided';
+    </script>
 </body>
 
 </html>

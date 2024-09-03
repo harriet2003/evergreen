@@ -40,7 +40,7 @@
     </header>
 
     <main>
-        <form id="plantSeedling" action="" method="POST">
+        <form id="plantSeedling" action="">
 
             <div class="tab">
                 <h6 class="question">

@@ -31,22 +31,29 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-   // This function will figure out which tab to display
    var x = document.getElementsByClassName("tab");
-   // Exit the function if any field in the current tab is invalid:
+
    if (n == 1 && !validateForm()) return false;
-   // Hide the current tab:
+
    x[currentTab].style.display = "none";
-   // Increase or decrease the current tab by 1:
-   currentTab = currentTab + n;
-   // if you have reached the end of the form... :
+
+   currentTab += n;
+
    if (currentTab >= x.length) {
-      //...the form gets submitted:
-      document.getElementById("plantSeedling").submit();
+      // Store values in sessionStorage
+      const userComment = document.getElementById("userComment").value;
+      const userName = document.getElementById("userName").value;
+      const userLocation = document.getElementById("city-select").value;
+
+      sessionStorage.setItem("userComment", userComment);
+      sessionStorage.setItem("userName", userName);
+      sessionStorage.setItem("userLocation", userLocation);
+
+      // Redirect to the other page
       window.location.href = "../plant-a-seed/plantResult.php";
       return false;
    }
-   // Otherwise, display the correct tab:
+
    showTab(currentTab);
 }
 
