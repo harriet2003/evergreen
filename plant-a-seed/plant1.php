@@ -43,7 +43,7 @@
 
         <div class="seedlingSelection">
 
-            <i class="fa-solid fa-arrow-left prev-btn"></i>
+            <i class="prev-btn fa-solid fa-arrow-left"></i>
 
             <div class="carousel-container">
                 <div class="carousel">
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <i class="fa-solid fa-arrow-right next-btn"></i>
+            <i class="next-btn fa-solid fa-arrow-right"></i>
         </div>
 
         <div class="progressBar desktopProgress">

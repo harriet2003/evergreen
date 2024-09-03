@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/typography.css" />
     <link rel="stylesheet" href="../css/navbar.css">
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/seedling.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -42,8 +43,8 @@
 
         <div class="result">
             <div>
-                <p id="plantName">Manuka</p>
-                <img src="../images/illustrations/manuka.svg" alt="image of your seedling">
+                <p class="selected-caption" id="plantName"></p>
+                <img class="selected-image" alt="image of your seedling">
                 <p id="plantName" style="opacity: 0;">Manuka</p>
             </div>
             <div>

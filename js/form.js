@@ -43,6 +43,7 @@ function nextPrev(n) {
    if (currentTab >= x.length) {
       //...the form gets submitted:
       document.getElementById("plantSeedling").submit();
+      window.location.href = "../plant-a-seed/plantResult.php";
       return false;
    }
    // Otherwise, display the correct tab:
