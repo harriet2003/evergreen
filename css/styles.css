@@ -14,6 +14,13 @@
     --maroon: #6d1d14;
 }
 
+#audioPlayer {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
 /* UNIVERSAL STYLES */
 
 body {
@@ -309,7 +316,8 @@ header {
     justify-content: space-between;
 }
 
-#plantSeedling {
+#plantSeedling2,
+#plantSeedling3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -318,7 +326,8 @@ header {
     text-align: center;
 }
 
-#plantSeedling input {
+#plantSeedling2 input,
+#plantSeedling3 input {
     width: 70vw;
     background-color: transparent;
     border: none;
@@ -335,18 +344,14 @@ header {
 }
 
 /* Mark input boxes that gets an error on validation: */
-#plantSeedling input.invalid {
+#plantSeedling2 input.invalid,
+#plantSeedling3 input.invalid {
     background-color: var(--cream);
-}
-
-/* Hide all steps by default: */
-.tab {
-    display: none;
 }
 
 .formButtons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
 }
 
@@ -520,11 +525,12 @@ header {
     }
 
     /* FORM */
-    #plantSeedling {
+    #plantSeedling2, #plantSeedling3 {
         width: 50vw;
     }
 
-    #plantSeedling input {
+    #plantSeedling2 input,
+    #plantSeedling3 input {
         width: 30vw;
         margin-top: 2rem !important;
     }

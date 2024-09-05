@@ -1,4 +1,5 @@
 <?php
+
 // Turn on error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -23,11 +24,10 @@ if ($mysqli->connect_error) {
   exit();
 }
 
-//echo 'Success: A proper connection to MySQL was made.';
-//echo '<br>';
-//echo 'Host information: ' . $mysqli->host_info;
-//echo '<br>';
-//echo 'Protocol version: ' . $mysqli->protocol_version;
-
+// echo 'Success: A proper connection to MySQL was made.';
+// echo '<br>';
+// echo 'Host information: '.$mysqli->host_info;
+// echo '<br>';
+// echo 'Protocol version: '.$mysqli->protocol_version;
 
 ?>

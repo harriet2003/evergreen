@@ -74,3 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Selected Caption:", selectedCaption);
    }
 });
+
+
+

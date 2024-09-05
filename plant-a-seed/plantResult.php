@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +23,7 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html" class="currentPage">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </nav>
 
@@ -33,7 +37,7 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </div>
     </header>
@@ -49,29 +53,28 @@
             </div>
             <div>
                 <p>What Nature Means To Me</p>
-                <h6 id="outputUserComment"></h6>
-                <p id="outputUserName"></p>
-                <p id="outputUserLocation"></p>
+
+                <?php
+                include '../connection.php';
+
+                $sql = "SELECT userComment, userName, userLocation FROM user_seedling";
+                $result = $mysqli->query($sql);
+
+
+                if ($_SESSION == TRUE) {
+                    echo "<h6>" . $_SESSION["userComment"] . "</h6>";
+                    echo "<p>" . $_SESSION["userName"] . "</p>";
+                    echo "<p>" . $_SESSION["userLocation"] . "</p>";
+                }
+
+                $mysqli->close();
+                ?>
             </div>
         </div>
 
-        <div class="buttonOptions">
-            <a href="../ourForest.php" class="button">Plant</a>
-        </div>
+        <a href="../ourForest.php" class="button" id="plantButton">Plant</a>
 
     </main>
-
-    <script>
-        // Retrieve values from sessionStorage
-        const userComment = sessionStorage.getItem("userComment");
-        const userName = sessionStorage.getItem("userName");
-        const userLocation = sessionStorage.getItem("userLocation");
-
-        // Display the values
-        document.getElementById("outputUserComment").textContent = userComment || 'Not provided';
-        document.getElementById("outputUserName").textContent = userName || 'Not provided';
-        document.getElementById("outputUserLocation").textContent = userLocation || 'Not provided';
-    </script>
 </body>
 
 </html>

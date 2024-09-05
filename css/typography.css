@@ -140,6 +140,14 @@ input {
     margin: 0;
 }
 
+.exampleText {
+    width: 75%;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 0.75rem;
+    margin: 0 auto;
+}
+
 /* ABOUT */
 .actionBox h6 {
     margin-block: 1rem 0.5rem;
@@ -191,6 +199,12 @@ input {
 
     .result div:nth-child(2) p {
         font-size: 1.125rem;
+    }
+
+    .exampleText {
+        font-size: 0.75rem;
+        margin: 0 auto;
+        margin-top: 2rem;
     }
 
 

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +13,6 @@
     <link rel="stylesheet" href="../css/typography.css" />
     <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/script.js"></script>
-    <script src="../js/form.js" defer></script>
-    <script src="../js/locations.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,7 +22,7 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html" class="currentPage">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </nav>
 
@@ -34,52 +36,54 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </div>
     </header>
 
     <main>
-        <form id="plantSeedling" action="">
+        <form method="POST" id="plantSeedling2">
 
-            <div class="tab">
+            <div class="formInput">
                 <h6 class="question">
                     Nature can mean so many different things to all of us.
                     Why do you love nature, what inspires you to protect our forest?
                 </h6>
-                <input type="text" id="userComment" name="userComment" placeholder="type here"
-                    oninput="this.className = ''">
+                <p class="exampleText">Taking your dog for walks around the park, annual tramps with your best mates,
+                    summer picnics under the shade of trees</p>
+                <input type="text" id="userComment" name="userComment" placeholder="type here">
             </div>
 
-            <div class="tab">
-                <h6 class="question">
-                    Now just a little but about you, what is your name and where do you live? Don't worry, these
-                    questions are optional if you don't feel like sharing.
-                </h6>
-                <input type="text" id="userName" name="userName" placeholder="What is your name? (optional)"
-                    oninput="this.className = ''">
-
-                <input list="cities" id="city-select" name="city" placeholder="Where are you from? (optional)"
-                    oninput="this.className = ''">
-
-                <datalist id="cities">
-                    <!-- Options will be populated here -->
-                </datalist>
-            </div>
 
             <div class="formButtons">
-                <button type="button" id="prevBtn1" onclick="backToSeedling()" class="button">Back</button>
-                <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="button">Back</button>
-                <button type="button" id="nextBtn" onclick="nextPrev(1)" class="button">Next</button>
+                <button type="button" id="prevBtn1" class="button">Back</button>
+                <button type="submit" name="submitComment" id="nextBtn1" class="button">Next</button>
             </div>
 
+            <?php
+            include '../connection.php';
 
+            if (isset($_POST['submitComment'])) {
+                $userComment = $_POST['userComment'];
+
+                //$sql = "INSERT INTO user_seedling (userComment, userName, userLocation) VALUES ('$userComment', '', '')";
+                //$result = $mysqli->query($sql);
+            
+                //if ($result == TRUE) {
+                $_SESSION['userComment'] = $userComment;
+                header("refresh:0.5;url=plant3.php");
+                //} else {
+                //  echo "Error!<br>";
+                // echo $mysqli->error;
+                // }
+            }
+            ?>
         </form>
 
         <div class="progressBar desktopProgress">
             <i class="fa-solid fa-circle"></i>
-            <i id="seedQestion2" class="fa-solid fa-circle"></i>
-            <i id="seedQestion3" class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle currentCircle"></i>
+            <i class="fa-solid fa-circle"></i>
             <i class="fa-solid fa-circle"></i>
         </div>
     </main>
@@ -92,6 +96,12 @@
             <i class="fa-solid fa-circle"></i>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("prevBtn1").addEventListener("click", function () {
+            window.location.href = "../plant-a-seed/plant1.php";
+        });
+    </script>
 </body>
 
 </html>

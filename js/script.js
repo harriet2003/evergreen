@@ -1,3 +1,14 @@
+
+
+// Attach event listeners to the navigation links
+document.querySelectorAll(".nav-link").forEach((link) => {
+   link.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent the default link behavior (page reload)
+      const pageUrl = this.getAttribute("data-page"); // Get the page URL from the data attribute
+      loadContent(pageUrl); // Load the content using AJAX
+   });
+});
+
 /* INTRO ARRAY */
 const introSlides = [
    "New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and wildlife forms have evolved to create the Aotearoa we know today.",
@@ -78,7 +89,6 @@ const circles = document.querySelectorAll("#progressBar1 i");
 circles.forEach((circle) => {
    circle.addEventListener("click", handleCircleClick);
 });
-
 
 /* CURTAIN MENU */
 function openNav() {

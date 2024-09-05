@@ -19,7 +19,7 @@
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html" class="currentPage">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </nav>
 
@@ -33,7 +33,7 @@
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
-                <a href="../about.html">About</a>
+                <a href="../about.html">Our Purpose</a>
             </div>
         </div>
     </header>
