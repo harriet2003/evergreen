@@ -102,15 +102,21 @@ a {
     margin: 0;
 }
 
-#helpPopup i {
+#helpPopup i,
+#seedlingInfo i {
     font-size: 1.5rem;
     align-self: flex-end;
 }
 
-#helpPopup h6 {
+#helpPopup h6,
+#seedlingInfo h6 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+}
+
+#seedlingInfo h6 {
+    margin: 1rem 0 0 0;
 }
 
 .plantSeedlingPage main h5 {

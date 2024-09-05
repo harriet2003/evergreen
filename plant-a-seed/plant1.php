@@ -66,6 +66,7 @@
                         <img src="../images/illustrations/koru.svg" alt="image of koru seedling">
                     </div>
                 </div>
+                <i class="fa-solid fa-circle-info" onclick="openSeedlingInfo()" id="openSeedling"></i>
             </div>
 
             <i class="next-btn fa-solid fa-arrow-right"></i>
@@ -79,12 +80,20 @@
         </div>
 
         <p class="carousel-caption">Fern</p> <!-- Caption below the carousel -->
+
+        <div id="seedlingInfo">
+            <i class="fa-solid fa-xmark" onclick="closeSeedlingInfo()"></i>
+            <article>
+                <h6 id="plantTitle"></h6>
+                <p id="plantDescription"></p>
+            </article>
+        </div>
     </main>
 
     <footer>
         <form action="plant2.php">
             <input type="hidden" name="selectedImage" id="selectedImage">
-            <button type="submit" class="button submitSeedling">Next</button>
+            <button type="submit" class="button submitSeedling" name="submitSeedling">Next</button>
         </form>
 
         <div class="progressBar mobileProgress">

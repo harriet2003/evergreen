@@ -187,7 +187,8 @@ header {
     opacity: 0;
 }
 
-#helpPopup {
+#helpPopup,
+#seedlingInfo {
     opacity: 0;
     width: 80vw;
     position: fixed;
@@ -204,12 +205,19 @@ header {
     place-content: center;
 }
 
-#helpPopup article {
+#seedlingInfo{
+    justify-content: flex-start;
+    gap: 0;
+}
+
+#helpPopup article,
+#seedlingInfo article {
     text-align: center;
 }
 
 #helpPopup i:hover,
-.forestPage footer h6:hover {
+.forestPage footer h6:hover,
+#seedlingInfo i:hover {
     cursor: pointer;
 }
 
@@ -283,6 +291,20 @@ header {
     overflow: hidden;
     display: flex;
     place-content: center;
+}
+
+.carousel-container i {
+    font-size: 1.5rem;
+    padding: 1rem;
+    position: absolute;
+    z-index: 2;
+    align-self: flex-start;
+}
+
+#seedlingInfo{
+    opacity: 100;
+    z-index: 3;
+    display: none;
 }
 
 .carousel-item img {
@@ -470,7 +492,8 @@ header {
 
     /* FOREST PAGE */
 
-    #helpPopup {
+    #helpPopup,
+    #seedlingInfo {
         width: 40vw;
         height: auto;
         margin: 0 auto;
@@ -525,7 +548,8 @@ header {
     }
 
     /* FORM */
-    #plantSeedling2, #plantSeedling3 {
+    #plantSeedling2,
+    #plantSeedling3 {
         width: 50vw;
     }
 
