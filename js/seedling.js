@@ -82,16 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
    }
 
-   // Function to update modal content based on the current plant
-   document.getElementById("openSeedling").addEventListener("click", () => {
-      const plantTitle = document.getElementById("plantTitle");
-      const plantDescription = document.getElementById("plantDescription");
-
-      // Update the title and description in the modal based on the current plant
-      plantTitle.textContent = plantInfo[currentIndex].title;
-      plantDescription.textContent = plantInfo[currentIndex].description;
-   });
-
    // Store selected image and caption
    carouselItems.forEach((item, index) => {
       item.addEventListener("click", () => {
@@ -127,4 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Selected Image:", selectedImageSrc);
       console.log("Selected Caption:", selectedCaption);
    }
+
+   // Function to update modal content based on the current plant
+   document.getElementById("openSeedling").addEventListener("click", () => {
+      const plantTitle = document.getElementById("plantTitle");
+      const plantDescription = document.getElementById("plantDescription");
+
+      // Update the title and description in the modal based on the current plant
+      plantTitle.textContent = plantInfo[currentIndex].title;
+      plantDescription.textContent = plantInfo[currentIndex].description;
+   });
 });

@@ -72,9 +72,8 @@ session_start();
                 $userName = $_POST['userName'];
                 $userLocation = $_POST['userLocation'];
                 $userComment = $_SESSION['userComment'];
-                $chosenSeedling = $_SESSION['chosenSeedling'];
 
-                $sql = "INSERT INTO user_seedling (chosenSeedling, userComment, userName, userLocation) VALUES ('$chosenSeedling', '$userComment', '$userName', '$userLocation')";
+                $sql = "INSERT INTO user_seedling (userComment, userName, userLocation) VALUES ('$userComment', '$userName', '$userLocation')";
                 $result = $mysqli->query($sql);
 
                 if ($result == TRUE) {

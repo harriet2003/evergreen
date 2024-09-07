@@ -49,7 +49,7 @@ session_start();
             <div>
                 <p class="selected-caption" id="plantName"></p>
                 <img class="selected-image" alt="image of your seedling">
-                <p id="plantName" style="opacity: 0;">Manuka</p>
+                <p id="plantName" style="opacity: 0;">Filler</p>
             </div>
             <div>
                 <p>What Nature Means To Me</p>
