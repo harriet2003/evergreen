@@ -205,7 +205,7 @@ header {
     place-content: center;
 }
 
-#seedlingInfo{
+#seedlingInfo {
     justify-content: flex-start;
     gap: 0;
 }
@@ -246,8 +246,15 @@ header {
     bottom: 0;
 }
 
-.chooseSeedling main {
+.chooseSeedling {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chooseSeedling main {
+    height: 80vh;
     gap: 2rem;
     justify-content: flex-start;
 }
@@ -263,70 +270,69 @@ header {
     display: none;
 }
 
-
 /* CAROUSEL */
 
 .carousel-container {
-    margin-top: 3rem;
-    position: relative;
-    width: 90%;
-    max-width: 300px;
+    width: 100%;
     overflow: hidden;
+    text-align: center;
+}
+
+#plantSelectionForm {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    border: 1px solid white;
-    aspect-ratio: 1/1;
+    width: 100%;
 }
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    aspect-ratio: 1/1;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    place-content: center;
 }
 
-.carousel-container i {
-    font-size: 1.5rem;
-    padding: 1rem;
-    position: absolute;
-    z-index: 2;
-    align-self: flex-start;
-}
-
-#seedlingInfo{
-    opacity: 100;
-    z-index: 3;
+.carousel-slide {
     display: none;
+    text-align: center;
+    padding: 10px;
+    width: 80vw;
+    max-width: 400px;
 }
 
-.carousel-item img {
-    width: 66%;
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 15%;
+    transition: border 0.3s ease;
+}
+
+.carousel-slide.active {
     display: block;
 }
 
-.prev-btn,
-.next-btn {
+/* Style for selected image */
+.carousel-slide.selected img {
+    background-color: #f7f7f728;
+}
+
+.carousel-navigation button {
+    background-color: transparent;
+    border: 0;
     color: white;
-    border: none;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+.carousel-navigation button:hover{
     cursor: pointer;
-    padding-top: 3rem;
 }
 
-#carousel-caption {
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.carousel-item.selected {
-    background-color: rgba(255, 255, 255, 0.2);
+.carousel-submit {
+    margin-top: 20px;
 }
 
 /* FORM */
@@ -513,8 +519,12 @@ header {
         flex-direction: row;
     }
 
+    .chooseSeedling {
+        overflow-y: scroll;
+        margin-bottom: 5rem;
+    }
+
     .chooseSeedling main {
-        height: 50vh;
         gap: 0;
         justify-content: flex-start;
     }
@@ -532,19 +542,43 @@ header {
         display: none;
     }
 
-    .carousel-container {
-        margin-top: 0;
-        width: 90%;
-        max-width: 220px;
+    .carousel {
+        width: 50vw;
     }
 
-    .seedlingSelection {
-        width: 33vw;
+    .carousel-slide {
+        max-width: 300px;
+        width: 20vw;
     }
 
-    .prev-btn,
-    .next-btn {
-        padding-top: 0;
+    .carousel-slide img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+        border: 1px solid white;
+        padding: 15%;
+        transition: border 0.3s ease;
+    }
+
+    .carousel-slide.active {
+        display: block;
+    }
+
+    /* Style for selected image */
+    .carousel-slide.selected img {
+        background-color: #f7f7f728;
+    }
+
+    .carousel-navigation button {
+        background-color: transparent;
+        border: 0;
+        color: white;
+        margin-bottom: 50px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-submit {
+        margin-top: 20px;
     }
 
     /* FORM */

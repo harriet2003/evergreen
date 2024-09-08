@@ -86,6 +86,10 @@ nav i {
     font-weight: 600;
 }
 
+.chooseSeedling nav{
+    margin-bottom: 2rem;
+}
+
 
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
@@ -126,5 +130,9 @@ nav i {
 
     .biggerTitle {
         font-size: 4rem;
+    }
+
+    .chooseSeedling nav{
+        margin-bottom: 0rem;
     }
 }

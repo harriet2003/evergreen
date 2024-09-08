@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="../css/typography.css" />
     <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/script.js" defer></script>
-    <script src="../js/seedling.js" defer></script>
+    <script src="../js/chooseSeedling.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -47,8 +43,41 @@ session_start();
 
         <div class="result">
             <div>
-                <p class="selected-caption" id="plantName"></p>
-                <img class="selected-image" alt="image of your seedling">
+                <?php
+                session_start(); // Ensure session is started
+                include '../connection.php';
+
+                // Check if the session contains the chosen seedling
+                if (isset($_SESSION["chosenSeedling"])) {
+                    $chosenSeedling = $_SESSION["chosenSeedling"];
+                    echo "<p id='plantName'>" . $chosenSeedling . "</p>";
+
+                    // Map plant names to their corresponding image paths
+                    $plantImages = [
+                        "Fern" => "../images/illustrations/fern.svg",
+                        "Pohutukawa" => "../images/illustrations/pohutakawa.svg",
+                        "Kowhai" => "../images/illustrations/kowhai.svg",
+                        "Manuka" => "../images/illustrations/manuka.svg",
+                        "Rata" => "../images/illustrations/rata.svg",
+                        "Koru" => "../images/illustrations/koru.svg"
+                    ];
+
+                    // Check if the chosen seedling exists in the plantImages array and display the image
+                    if (array_key_exists($chosenSeedling, $plantImages)) {
+                        $plantImage = $plantImages[$chosenSeedling];
+                        echo "<img src='" . $plantImage . "' alt='Image of " . $chosenSeedling . "'>";
+                    } else {
+                        echo "<p>No image available for this plant.</p>";
+                    }
+                } else {
+                    // If the chosenSeedling is not in the session, display an error message
+                    echo "<p>No plant selected.</p>";
+                }
+
+                $mysqli->close();
+                ?>
+
+
                 <p id="plantName" style="opacity: 0;">Filler</p>
             </div>
             <div>
