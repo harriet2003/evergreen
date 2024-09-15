@@ -7,6 +7,7 @@ const chosenSeedlingInput = document.getElementById("chosenSeedling");
 const form = document.getElementById("plantSelectionForm");
 const validationMessage = document.getElementById("validationMessage"); // Validation message element
 
+
 // Function to show the slide and reset selection on navigation
 function showSlide(index) {
    slides.forEach((slide, i) => {
@@ -57,6 +58,7 @@ slides.forEach((slide, index) => {
 
 // Initialize the first slide without selecting it automatically
 showSlide(currentSlide);
+
 
 // Handle form submission with validation
 form.addEventListener("submit", function (event) {
