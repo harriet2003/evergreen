@@ -1,3 +1,19 @@
+<?php
+include 'connection.php'; // Query to get all plant names 
+
+$sql = "SELECT chosenSeedling FROM user_seedling";
+$result = $mysqli->query($sql);
+
+$plants = [];
+if ($result->num_rows > 0) {
+   while ($row = $result->fetch_assoc()) {
+      $plants[] = $row['chosenSeedling'];
+   }
+} else {
+   echo "No plants found";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,10 +58,21 @@
 
    <main>
 
-      <div id="forest">
-         <!--Seedlings here-->
+      <div id="forestFrame">
+         <?php foreach ($plants as $plant): ?>
+            <?php
+            // Generate random positions and size for each plant
+            $top = rand(0, 60); // Random percentage for top position
+            $left = rand(0, 85); // Random percentage for left position
+            $size = rand(100, 250); // Random size between 50px and 200px
+            ?>
+            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;">
+               <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;">
+            </div>
+         <?php endforeach; ?>
       </div>
 
+      <!-- HELP POPUP -->
       <div id="helpPopup" class="modal">
          <i class="fa-solid fa-xmark" onclick="closeHelpPopup()"></i>
          <article class="modal-content">

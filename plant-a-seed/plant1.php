@@ -107,7 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <!--Fact Popup Button -->
                 <p id="learnMoreBtn">Learn More</p>
 
-
                 <!-- Hidden input to store the selected plant -->
                 <input type="hidden" id="chosenSeedling" name="chosenSeedling" value="">
 

@@ -33,7 +33,7 @@ nav i {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 9999;
     right: 0;
     top: 0;
     background-color: #DBEDCC;
@@ -78,6 +78,7 @@ nav i {
 
 .forestPage nav {
     align-items: flex-start;
+    margin-bottom: 0;
 }
 
 .biggerTitle {
