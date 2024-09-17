@@ -33,7 +33,7 @@ nav i {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     right: 0;
     top: 0;
     background-color: #DBEDCC;

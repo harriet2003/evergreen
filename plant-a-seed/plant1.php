@@ -79,12 +79,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
 
                     <div class="carousel-slide" data-plant="Kōwhai">
-                        <img src="../images/illustrations/kowhai.svg" alt="image of kowhai seedling">
+                        <img src="../images/illustrations/kōwhai.svg" alt="image of kowhai seedling">
                         <p>Kōwhai</p>
                     </div>
 
                     <div class="carousel-slide" data-plant="Mānuka">
-                        <img src="../images/illustrations/manuka.svg" alt="image of manuka seedling">
+                        <img src="../images/illustrations/mānuka.svg" alt="image of manuka seedling">
                         <p>Mānuka</p>
                     </div>
 

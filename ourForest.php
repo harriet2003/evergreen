@@ -66,15 +66,60 @@ if ($result->num_rows > 0) {
             $left = rand(0, 85); // Random percentage for left position
             $size = rand(100, 250); // Random size between 50px and 200px
             ?>
-            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;">
+            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
+               onclick="showDataModal('<?= strtolower($plant) ?>')">
                <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;">
             </div>
          <?php endforeach; ?>
       </div>
 
+      <!-- Modal Structure -->
+      <div id="plantDataModal" class="modal">
+         <span class="close">&times;</span>
+         <div class="modal-content">
+            <img src="images/illustrations/koru.svg" alt="image of koru">
+            <div class="modal-text">
+               <p>What Nature Means To Me</p>
+               <h5 id="userComment">The sound of bird song reminds me of home</h5>
+               <p id="userName">User Name</p>
+               <p id="userLocation">Location</p>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         function showDataModal(plantName) {
+            var modal = document.getElementById("plantDataModal");
+            var plantNameElement = document.getElementById("plantName");
+            var userNameElement = document.getElementById("userName");
+            var userLocationElement = document.getElementById("userLocation");
+            var userCommentElement = document.getElementById("userComment");
+
+            modal.style.display = "block";
+         }
+
+         // Function to show the modal when the user clicks the "Learn More" button
+         document.getElementsByClassName('plant').onclick = function () {
+            showDataModal(plantName);
+         };
+
+         // Close the modal when the user clicks the "X"
+         document.querySelector('.close').onclick = function () {
+            document.getElementById('plantDataModal').style.display = "none";
+         };
+
+         // Close the modal when the user clicks outside of the modal
+         window.onclick = function (event) {
+            const modal = document.getElementById('plantDataModal');
+            if (event.target == modal) {
+               modal.style.display = "none";
+            }
+         };
+      </script>
+
       <!-- HELP POPUP -->
       <div id="helpPopup" class="modal">
-         <i class="fa-solid fa-xmark" onclick="closeHelpPopup()"></i>
+         <span class="close" onclick="closeHelpPopup()">&times;</span>
          <article class="modal-content">
             <h6>How to explore</h6>
             <p>Welcome to Our Forest, Our Ngāherehere.

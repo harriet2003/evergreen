@@ -56,8 +56,8 @@
                     $plantImages = [
                         "Fern" => "../images/illustrations/fern.svg",
                         "Pohutukawa" => "../images/illustrations/pohutakawa.svg",
-                        "Kowhai" => "../images/illustrations/kowhai.svg",
-                        "Manuka" => "../images/illustrations/manuka.svg",
+                        "Kōwhai" => "../images/illustrations/kōwhai.svg",
+                        "Mānuka" => "../images/illustrations/mānuka.svg",
                         "Rata" => "../images/illustrations/rata.svg",
                         "Koru" => "../images/illustrations/koru.svg"
                     ];

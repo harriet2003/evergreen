@@ -171,7 +171,7 @@ header {
     position: absolute;
     max-width: 250px;
     transition: filter 0.25s ease-in;
-    z-index: 40;
+    z-index: 9999;
     pointer-events: auto;
     /* Ensures the image can be interacted with */
 }
@@ -181,7 +181,7 @@ header {
     cursor: pointer;
 }
 
-/* Modal styles */
+/* Seedling Data Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -190,10 +190,34 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+#plantDataModal {
+    display: none;
+    background-color: var(--offwhite);
+    color: var(--forest);
+    padding: 2rem;
+    width: 80vw;
+    height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#plantDataModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#plantDataModal img {
+    max-width: 200px;
+    margin-block: 2rem;
+}
 
 .close {
     align-self: flex-end;
@@ -235,11 +259,12 @@ header {
 #helpPopup {
     opacity: 0;
     width: 80vw;
+    height: fit-content;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 10000;
     background-color: var(--lightGreen);
     color: var(--forest);
     padding: 2rem;
@@ -316,7 +341,6 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
 }
 
 /* CAROUSEL */
@@ -551,7 +575,33 @@ header {
         width: 40vw;
         height: auto;
         margin: 0 auto;
-        padding-bottom: 4rem;
+    }
+
+    #helpPopup article {
+        width: fit-content;
+    }
+
+    /* Seedling Data Modal styles */
+    #plantDataModal {
+        width: 45vw;
+        height: fit-content;
+    }
+
+    #plantDataModal .modal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #plantDataModal .modal-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    #plantDataModal img {
+        max-width: 40%;
+        margin-block: 0;
     }
 
     /* SEEDLINGS */
@@ -590,7 +640,7 @@ header {
         display: none;
     }
 
-    .modal-content {
+    #plantModal .modal-content {
         width: 40vw;
         padding-bottom: 4rem;
     }
