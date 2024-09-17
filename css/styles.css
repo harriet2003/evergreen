@@ -185,7 +185,7 @@ header {
 .modal {
     display: none;
     position: fixed;
-    z-index: 10000;
+    z-index: 10001;
     left: 0;
     top: 0;
     width: 100%;
@@ -220,10 +220,11 @@ header {
 }
 
 .close {
-    align-self: flex-end;
     float: right;
+    align-self: flex-end;
     font-size: 2rem;
     font-weight: bold;
+    padding-bottom: 2rem;
 }
 
 .close:hover,
@@ -602,6 +603,10 @@ header {
     #plantDataModal img {
         max-width: 40%;
         margin-block: 0;
+    }
+
+    #plantDataModal .close {
+        margin-bottom: 2rem;
     }
 
     /* SEEDLINGS */

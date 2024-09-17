@@ -1,6 +1,29 @@
 <?php
-include 'connection.php'; // Query to get all plant names 
+include 'connection.php';
 
+// Check if we are receiving an AJAX request for plant data
+if (isset($_GET['plantName'])) {
+   $plantName = $_GET['plantName'];
+
+   // Prepare the SQL query to fetch the relevant data
+   $sql = "SELECT userName, userLocation, userComment FROM user_seedling WHERE chosenSeedling = ?";
+   $stmt = $mysqli->prepare($sql);
+   $stmt->bind_param('s', $plantName);
+   $stmt->execute();
+   $result = $stmt->get_result();
+
+   if ($result->num_rows > 0) {
+      $data = $result->fetch_assoc();
+      echo json_encode($data);
+   } else {
+      echo json_encode(['error' => 'No data found']);
+   }
+
+   $stmt->close();
+   exit; // Stop further execution for AJAX requests
+}
+
+// If not an AJAX request, continue with the regular page rendering
 $sql = "SELECT chosenSeedling FROM user_seedling";
 $result = $mysqli->query($sql);
 
@@ -13,6 +36,7 @@ if ($result->num_rows > 0) {
    echo "No plants found";
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,10 +85,9 @@ if ($result->num_rows > 0) {
       <div id="forestFrame">
          <?php foreach ($plants as $plant): ?>
             <?php
-            // Generate random positions and size for each plant
-            $top = rand(0, 60); // Random percentage for top position
-            $left = rand(0, 85); // Random percentage for left position
-            $size = rand(100, 250); // Random size between 50px and 200px
+            $top = rand(0, 60);
+            $left = rand(0, 85);
+            $size = rand(100, 250);
             ?>
             <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
                onclick="showDataModal('<?= strtolower($plant) ?>')">
@@ -77,45 +100,16 @@ if ($result->num_rows > 0) {
       <div id="plantDataModal" class="modal">
          <span class="close">&times;</span>
          <div class="modal-content">
-            <img src="images/illustrations/koru.svg" alt="image of koru">
+            <!-- This image will be updated dynamically -->
+            <img id="modalPlantImage" src="images/illustrations/koru.svg" alt="plant illustration">
             <div class="modal-text">
                <p>What Nature Means To Me</p>
-               <h5 id="userComment">The sound of bird song reminds me of home</h5>
+               <h5 id="userComment">Filler comment</h5>
                <p id="userName">User Name</p>
                <p id="userLocation">Location</p>
             </div>
          </div>
       </div>
-
-      <script>
-         function showDataModal(plantName) {
-            var modal = document.getElementById("plantDataModal");
-            var plantNameElement = document.getElementById("plantName");
-            var userNameElement = document.getElementById("userName");
-            var userLocationElement = document.getElementById("userLocation");
-            var userCommentElement = document.getElementById("userComment");
-
-            modal.style.display = "block";
-         }
-
-         // Function to show the modal when the user clicks the "Learn More" button
-         document.getElementsByClassName('plant').onclick = function () {
-            showDataModal(plantName);
-         };
-
-         // Close the modal when the user clicks the "X"
-         document.querySelector('.close').onclick = function () {
-            document.getElementById('plantDataModal').style.display = "none";
-         };
-
-         // Close the modal when the user clicks outside of the modal
-         window.onclick = function (event) {
-            const modal = document.getElementById('plantDataModal');
-            if (event.target == modal) {
-               modal.style.display = "none";
-            }
-         };
-      </script>
 
       <!-- HELP POPUP -->
       <div id="helpPopup" class="modal">
@@ -146,6 +140,52 @@ if ($result->num_rows > 0) {
 
       <h6 onclick="openHelpPopup()" class="popup">Help</h6>
    </footer>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         // Close the modal when the user clicks the "X"
+         var closeButton = document.querySelector('.close');
+         closeButton.onclick = function () {
+            document.getElementById('plantDataModal').style.display = "none";
+         };
+
+         // Close the modal when the user clicks outside of the modal content
+         window.onclick = function (event) {
+            var modal = document.getElementById('plantDataModal');
+            if (event.target == modal) {
+               modal.style.display = "none";
+            }
+         };
+      });
+
+      function showDataModal(plantName) {
+         var modal = document.getElementById("plantDataModal");
+
+         // Fetch plant data from the same PHP file using plantName
+         fetch('ourForest.php?plantName=' + plantName)
+            .then(response => response.json())
+            .then(data => {
+               if (data.error) {
+                  console.error('No data found for this plant');
+                  return;
+               }
+
+               // Populate modal with the data
+               document.getElementById("userComment").textContent = data.userComment;
+               document.getElementById("userName").textContent = 'User Name: ' + data.userName;
+               document.getElementById("userLocation").textContent = 'Location: ' + data.userLocation;
+
+               // Update the modal image to match the clicked plant
+               var modalImage = document.getElementById("modalPlantImage");
+               modalImage.src = 'images/illustrations/' + plantName + '.svg'; // Dynamically set image based on plant name
+               modalImage.alt = plantName; // Update alt text too
+
+               // Display the modal
+               modal.style.display = "block";
+            })
+            .catch(error => console.error('Error fetching plant data:', error));
+      }
+   </script>
 </body>
 
 </html>
