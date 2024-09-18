@@ -26,7 +26,7 @@
             <i class="fa-solid fa-circle"></i>
          </div>
 
-         <div class="introText">
+         <div class="introText" id="changingContent">
             <h5 id="content"></h5>
 
             <a href="ourForest.php" class="button" id="introButton">Explore</a>
@@ -47,5 +47,20 @@
 
          <a href="ourForest.php" id="skip">Skip</a>
       </footer>
+
+      <script>
+         const button = document.getElementById("nextArrow");
+         const changingContent = document.getElementById("changingContent");
+
+         button.addEventListener("click", () => {
+            // Add the animation class to the element
+            changingContent.classList.add("slide-in");
+
+            // Optionally, remove the animation class after the animation ends
+            changingContent.addEventListener("animationend", () => {
+               changingContent.classList.remove("slide-in");
+            });
+         });
+      </script>
    </body>
 </html>

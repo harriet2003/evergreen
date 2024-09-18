@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,31 +61,34 @@ session_start();
             </div>
 
             <?php
+            session_start();
             include '../connection.php';
 
             if (isset($_POST['submitRest'])) {
 
-                $userName = $_POST['userName'];
-                $userLocation = $_POST['userLocation'];
+                // Check if userName or userLocation are empty and assign default values
+                $userName = !empty($_POST['userName']) ? $_POST['userName'] : 'Anonymous';
+                $userLocation = !empty($_POST['userLocation']) ? $_POST['userLocation'] : 'New Zealand';
                 $userComment = $_SESSION['userComment'];
                 $chosenSeedling = $_SESSION['chosenSeedling'];
 
+                // Insert into the database
                 $sql = "INSERT INTO user_seedling (chosenSeedling, userComment, userName, userLocation) VALUES ('$chosenSeedling', '$userComment', '$userName', '$userLocation')";
                 $result = $mysqli->query($sql);
 
                 if ($result == TRUE) {
-
+                    // Store the values in session variables
                     $_SESSION['userName'] = $userName;
                     $_SESSION['userLocation'] = $userLocation;
 
-                    header("refresh:0.5;url=plantResult.php");
+                    // Redirect to the result page
+                    header("refresh:0;url=plantResult.php");
                 } else {
                     echo "Error!<br>";
                     echo $mysqli->error;
                 }
             }
             ?>
-
         </form>
 
         <div class="progressBar desktopProgress">

@@ -17,5 +17,27 @@
       </div>
 
       <a href="intro.html" class="button">Start</a>
+
+      <button id="birdButton">Want to hear some birds?</button>
+      <audio id="birdSong" src="bird-song.mp3"></audio>
+
+      <script>
+         const audio = document.getElementById("birdSong");
+         const button = document.getElementById("birdButton");
+
+         // Set the time (in seconds) where the audio should start
+         const startTime = 10; // Start at 10 seconds
+
+         button.addEventListener("click", () => {
+            if (audio.paused) {
+               audio.currentTime = startTime; // Set the starting point
+               audio.play();
+               button.textContent = "Click again for silence";
+            } else {
+               audio.pause();
+               button.textContent = "Want to hear some birds?";
+            }
+         });
+      </script>
    </body>
 </html>

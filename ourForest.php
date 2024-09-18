@@ -104,9 +104,9 @@ if ($result->num_rows > 0) {
             <img id="modalPlantImage" src="images/illustrations/koru.svg" alt="plant illustration">
             <div class="modal-text">
                <p>What Nature Means To Me</p>
-               <h5 id="userComment">Filler comment</h5>
-               <p id="userName">User Name</p>
-               <p id="userLocation">Location</p>
+               <h5 id="userComment"></h5>
+               <p id="userName"></p>
+               <p id="userLocation"></p>
             </div>
          </div>
       </div>
@@ -172,8 +172,8 @@ if ($result->num_rows > 0) {
 
                // Populate modal with the data
                document.getElementById("userComment").textContent = data.userComment;
-               document.getElementById("userName").textContent = 'User Name: ' + data.userName;
-               document.getElementById("userLocation").textContent = 'Location: ' + data.userLocation;
+               document.getElementById("userName").textContent = data.userName;
+               document.getElementById("userLocation").textContent = data.userLocation;
 
                // Update the modal image to match the clicked plant
                var modalImage = document.getElementById("modalPlantImage");

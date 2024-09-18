@@ -53,10 +53,42 @@ header {
     display: none;
 }
 
+/* NORMAL FADE IN TRANSITION */
+@keyframes fade-in {
+    from {
+        background-color: rgba(#000, 0.25);
+        opacity: 0;
+    }
+
+    to {
+        background-color: rgba(#000, 0);
+        opacity: 1;
+    }
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 
 /* LANDING */
 
 #landing {
+    animation: fade-in 2s forwards;
     height: 100vh;
     width: auto;
     background-image: url(../images/landing-background.jpg);
@@ -84,6 +116,29 @@ header {
     margin-top: 4rem;
 }
 
+#birdButton {
+    background-color: var(--offwhite);
+    border-radius: 50%;
+    border: 0;
+    width: 90px;
+    height: 90px;
+    padding: 1rem;
+    aspect-ratio: 1/1;
+    font-family: inherit;
+    font-size: 0.7rem;
+    text-wrap: wrap;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    transform: rotate(-10deg);
+}
+
+#birdButton:hover {
+    background-color: var(--salmon);
+    transition-duration: 0.5s;
+}
+
+
 /* INTRO */
 .intro {
     height: 100vh;
@@ -94,6 +149,7 @@ header {
 }
 
 .introContent {
+    animation: fade-in 2s forwards;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -124,16 +180,19 @@ header {
 
 .active,
 .currentCircle {
+    transition: 1s ease;
     color: var(--salmon);
     /* Color for active slide */
 }
 
 .completed {
+    transition: 1s ease;
     color: var(--offwhite);
     /* Color for completed slides */
 }
 
 .intro footer {
+    animation: fade-in 2s forwards;
     width: 100%;
     display: flex;
     align-items: center;
@@ -145,8 +204,26 @@ header {
     cursor: pointer;
 }
 
-/* FOREST PAGE */
+/* SLIDE IN TRANSITION */
+@keyframes slide-in {
+    from {
+        background-color: rgba(#000, 0.25);
+        opacity: 0;
+        transform: translateY(25vh);
+    }
 
+    to {
+        background-color: rgba(#000, 0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slide-in 1.5s forwards;
+}
+
+/* FOREST PAGE */
 .forestPage,
 .plantSeedlingPage,
 .seedlingResult {
@@ -161,6 +238,7 @@ header {
 }
 
 #forestFrame {
+    animation: fade-in 1s forwards;
     position: relative;
     height: 60vh;
     width: 100%;
@@ -279,7 +357,11 @@ header {
     text-align: center;
 }
 
-#helpPopup i:hover,
+#helpPopup span {
+    padding: 0;
+}
+
+#helpPopup span:hover,
 .forestPage footer h6:hover {
     cursor: pointer;
 }
@@ -317,7 +399,7 @@ header {
 }
 
 .chooseSeedling main {
-    height: 80vh;
+    height: 100vh;
     gap: 2rem;
     justify-content: flex-start;
 }
@@ -345,7 +427,6 @@ header {
 }
 
 /* CAROUSEL */
-
 .carousel-container {
     width: 100%;
     overflow: hidden;
@@ -388,7 +469,6 @@ header {
     display: block;
 }
 
-/* Style for selected image */
 .carousel-slide.selected img {
     background-color: #f7f7f728;
 }
@@ -410,6 +490,10 @@ header {
 }
 
 /* FORM */
+
+.plantSeedlingPage form {
+    animation: fade-in 2s forwards;
+}
 
 .questionLayout {
     height: 100vh;
@@ -443,12 +527,6 @@ header {
 #userName,
 #userLocation {
     margin-block: 1rem !important;
-}
-
-/* Mark input boxes that gets an error on validation: */
-#plantSeedling2 input.invalid,
-#plantSeedling3 input.invalid {
-    background-color: var(--cream);
 }
 
 .formButtons {
@@ -494,6 +572,10 @@ header {
     color: white;
 }
 
+.aboutPage main {
+    animation: fade-in 1s forwards;
+}
+
 .aboutPage article:first-child {
     margin-bottom: 5rem;
 }
@@ -509,6 +591,20 @@ header {
 .actionBox {
     display: flex;
     flex-direction: column;
+}
+
+.actionBox:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.actionBox:nth-child(3) {
+    transition-delay: 400ms;
+
+}
+
+.actionBox:nth-child(4) {
+    transition-delay: 600ms;
+
 }
 
 .actionBox div {
@@ -537,6 +633,14 @@ header {
 
     .hideOnDesktop {
         display: none;
+    }
+
+    #birdButton {
+        font-size: 0.8rem;
+        width: 110px;
+        height: 110px;
+        bottom: 10%;
+        left: 5%;
     }
 
     /* INTRO */
@@ -580,6 +684,7 @@ header {
 
     #helpPopup article {
         width: fit-content;
+        padding-bottom: 2rem;
     }
 
     /* Seedling Data Modal styles */
@@ -610,7 +715,6 @@ header {
     }
 
     /* SEEDLINGS */
-
     .plantSeedlingPage main {
         display: flex;
         flex-direction: column;

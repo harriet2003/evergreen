@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
 
                     <div class="carousel-slide" data-plant="Pohutukawa">
-                        <img src="../images/illustrations/pohutakawa.svg" alt="image of pohutukawa seedling">
+                        <img src="../images/illustrations/pohutukawa.svg" alt="image of pohutukawa seedling">
                         <p>Pohutukawa</p>
                     </div>
 
@@ -114,7 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <div class="carousel-submit">
                     <button type="submit" name="seedlingSubmit" class="button">Submit</button>
                     <!-- Validation message (hidden initially) -->
-                    <p id="validationMessage" style="color:red; display:none;">Please select a plant before submitting.
+                    <p id="validationMessage" style="color:#ff5c00; display:none; padding-bottom: 2rem;">Please select a
+                        seedling
                     </p>
                 </div>
             </form>

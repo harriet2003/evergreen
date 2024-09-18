@@ -51,7 +51,7 @@ session_start();
                 </h6>
                 <p class="exampleText">Taking your dog for walks around the park, annual tramps with your best mates,
                     summer picnics under the shade of trees</p>
-                <input type="text" id="userComment" name="userComment" placeholder="type here">
+                <input type="text" id="userComment" name="userComment" placeholder="type here" required>
             </div>
 
 
@@ -59,6 +59,9 @@ session_start();
                 <button type="button" id="prevBtn1" class="button">Back</button>
                 <button type="submit" name="submitComment" id="nextBtn1" class="button">Next</button>
             </div>
+
+            <p id="validationMessage2" style="color:#ff5c00; display:none; padding-bottom: 2rem;">Please fill out the
+                comment</p>
 
             <?php
             include '../connection.php';
@@ -71,7 +74,7 @@ session_start();
             
                 //if ($result == TRUE) {
                 $_SESSION['userComment'] = $userComment;
-                header("refresh:0.5;url=plant3.php");
+                header("refresh:0;url=plant3.php");
                 //} else {
                 //  echo "Error!<br>";
                 // echo $mysqli->error;
@@ -98,6 +101,14 @@ session_start();
     </footer>
 
     <script>
+        document.getElementById("nextBtn1").addEventListener("click", function (event) {
+            var userComment = document.getElementById("userComment").value;
+            if (userComment.trim() === "") {
+                document.getElementById("validationMessage2").style.display = "block";
+                event.preventDefault();  // Prevent form submission
+            }
+        });
+
         document.getElementById("prevBtn1").addEventListener("click", function () {
             window.location.href = "../plant-a-seed/plant1.php";
         });
