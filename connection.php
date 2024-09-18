@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $db_host = 'localhost';
 $db_user = 'root';
 $db_password = 'root';
-$db_db = 'evergreen_db';
+$db_db = 'evergreen';
 
 $mysqli = @new mysqli(
   $db_host,
