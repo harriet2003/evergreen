@@ -116,7 +116,8 @@ header {
     margin-top: 4rem;
 }
 
-#birdButton {
+#birdButton,
+#toPlantButton {
     background-color: var(--offwhite);
     border-radius: 50%;
     border: 0;
@@ -133,9 +134,11 @@ header {
     transform: rotate(-10deg);
 }
 
-#birdButton:hover {
+#birdButton:hover,
+#toPlantButton:hover {
     background-color: var(--salmon);
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 
@@ -561,7 +564,6 @@ header {
 
 
 /* ABOUT PAGE */
-
 .aboutPage {
     height: 100vh;
     background-image: url(../images/aboutBackground.jpg);
@@ -619,11 +621,41 @@ header {
     filter: saturate(0) brightness(100);
 }
 
-.aboutPage footer {
+.aboutPage footer,
+.dataPage footer {
     text-align: center;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 0 1rem 2rem 1rem;
     color: var(--lime);
 }
+
+/* DATA PAGE*/
+.dataPage {
+    height: 100vh;
+    background-image: url(../images/dataBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+#totalSeedlings {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#toPlantButton {
+    left: unset;
+    bottom: unset;
+    right: 10%;
+    transform: rotate(15deg);
+}
+
+#moreToCome {
+    margin-block: 200px;
+    text-align: center;
+}
+
 
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
@@ -635,7 +667,8 @@ header {
         display: none;
     }
 
-    #birdButton {
+    #birdButton,
+    #toPlantButton {
         font-size: 0.8rem;
         width: 110px;
         height: 110px;
@@ -847,10 +880,25 @@ header {
         margin-bottom: rem;
     }
 
-    .aboutPage footer {
-        padding-top: 4rem;
+    .aboutPage footer,
+    .dataPage footer {
+        padding-top: 2rem;
         width: 50%;
         margin: 0 auto;
     }
+
+    /* DATA PAGE */
+
+    #toPlantButton {
+        left: unset;
+        bottom: unset;
+        right: 10%;
+        transform: rotate(15deg);
+    }
+
+    #moreToCome {
+        margin-block: 100px;
+    }
+
 
 }

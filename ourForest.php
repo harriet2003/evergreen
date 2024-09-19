@@ -37,7 +37,6 @@ if ($result->num_rows > 0) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +59,7 @@ if ($result->num_rows > 0) {
          <a href="ourForest.php" class="biggerTitle">Our Forest</a>
          <div>
             <a href="ourForest.php" class="currentPage">Our Forest</a>
+            <a href="ourData.php">Our Data</a>
             <a href="about.html">Our Purpose</a>
          </div>
       </nav>
@@ -74,7 +74,7 @@ if ($result->num_rows > 0) {
 
          <div class="overlay-content">
             <a href="ourForest.php" class="currentPage">Our Forest</a>
-
+            <a href="ourData.php">Our Data</a>
             <a href="about.html">Our Purpose</a>
          </div>
       </div>

@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <a href="../ourForest.php" class="navTitle">Evergreen</a>
             <div>
                 <a href="../ourForest.php">Our Forest</a>
+                <a href="../ourData.php">Our Data</a>
                 <a href="../about.html">Our Purpose</a>
             </div>
         </nav>
@@ -52,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="overlay-content">
                 <a href="../ourForest.php">Our Forest</a>
+                <a href="../ourData.php">Our Data</a>
                 <a href="../about.html">Our Purpose</a>
             </div>
         </div>

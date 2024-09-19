@@ -182,9 +182,20 @@ input {
     font-size: 0.75rem;
 }
 
+/* DATA */
+#totalSeedlings h5{
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+#totalSeedlings h1{
+    margin: 0;
+    font-size: 8rem;
+}
+
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
-    h1 {
+    h1,  #totalSeedlings h1 {
         font-size: 8rem;
     }
 
@@ -231,7 +242,6 @@ input {
         margin: 0 auto;
         margin-top: 2rem;
     }
-
 
     /* ABOUT PAGE */
     .actionBox h6 {
