@@ -117,7 +117,8 @@ header {
 }
 
 #birdButton,
-#toPlantButton {
+#toPlantButton,
+#shareButton {
     background-color: var(--offwhite);
     border-radius: 50%;
     border: 0;
@@ -132,10 +133,12 @@ header {
     left: 10%;
     bottom: 5%;
     transform: rotate(-10deg);
+    z-index: 2;
 }
 
 #birdButton:hover,
-#toPlantButton:hover {
+#toPlantButton:hover,
+#shareButton:hover {
     background-color: var(--salmon);
     transition-duration: 0.5s;
     cursor: pointer;
@@ -369,6 +372,13 @@ header {
     cursor: pointer;
 }
 
+#shareButton {
+    left: unset;
+    right: 5%;
+    bottom: 15%;
+    transform: rotate(15deg);
+}
+
 /* PLANT A SEEDLING PAGE */
 .plantSeedlingPage {
     background-image: url(../images/forestBackgroundBlur.jpg);
@@ -545,6 +555,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 
 .result {
     text-align: center;
@@ -745,6 +756,13 @@ header {
 
     #plantDataModal .close {
         margin-bottom: 2rem;
+    }
+
+    #shareButton {
+        width: 90px;
+        height: 90px;
+        right: 20%;
+        bottom: 10%;
     }
 
     /* SEEDLINGS */

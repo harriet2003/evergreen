@@ -57,7 +57,7 @@
                     // Map plant names to their corresponding image paths
                     $plantImages = [
                         "Fern" => "../images/illustrations/fern.svg",
-                        "Pohutukawa" => "../images/illustrations/pohutakawa.svg",
+                        "Pohutukawa" => "../images/illustrations/pohutukawa.svg",
                         "Kōwhai" => "../images/illustrations/kōwhai.svg",
                         "Mānuka" => "../images/illustrations/mānuka.svg",
                         "Rata" => "../images/illustrations/rata.svg",
@@ -78,8 +78,6 @@
 
                 $mysqli->close();
                 ?>
-
-
                 <p id="plantName" style="opacity: 0;">Filler</p>
             </div>
             <div>
@@ -105,6 +103,7 @@
 
         <a href="../ourForest.php" class="button" id="plantButton">Plant</a>
 
+        <button id="shareButton">Download & Share</button>
     </main>
 </body>
 
