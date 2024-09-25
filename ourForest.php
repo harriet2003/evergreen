@@ -43,7 +43,6 @@ $showSuccessModal = false;
 if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
    $showSuccessModal = true;
    unset($_SESSION['plantSuccess']); // Unset the session variable so the modal doesn't show again on page refresh
-   $lastPlantedSeedling = isset($_SESSION['lastPlantedSeedling']) ? $_SESSION['lastPlantedSeedling'] : null;
 }
 ?>
 
@@ -152,7 +151,6 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
 
       <script>
          var showSuccessModal = <?php echo json_encode($showSuccessModal); ?>;
-         var lastPlantedSeedling = <?php echo json_encode($lastPlantedSeedling); ?>;
       </script>
 
       <?php

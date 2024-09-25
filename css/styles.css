@@ -451,23 +451,6 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.flashing {
-    animation: flash 0.8s ease 3;
-}
-
-@keyframes flash {
-    0% {
-        filter: brightness(1);
-    }
-
-    50% {
-        filter: brightness(1.75);
-    }
-
-    100% {
-        filter: brightness(1);
-    }
-}
 
 
 /* CAROUSEL */
