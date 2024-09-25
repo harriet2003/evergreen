@@ -1,13 +1,11 @@
 <?php
-session_start(); // Ensure session is started
+session_start();
 
 if (isset($_POST['plantButton'])) {
-    // Set a success message in the session
     $_SESSION['plantSuccess'] = true;
 
-    // Redirect to ourForest.php
     header("Location: ../ourForest.php");
-    exit(); // Ensure no further code is executed
+    exit();
 }
 ?>
 
@@ -106,6 +104,8 @@ if (isset($_POST['plantButton'])) {
                     echo "<p class='resultContent'>" . $_SESSION["userName"] . "</p>";
                     echo "<p class='resultContent'>" . $_SESSION["userLocation"] . "</p>";
                 }
+
+                $_SESSION['lastPlantedSeedling'] = $_SESSION["chosenSeedling"];
 
                 $mysqli->close();
                 ?>

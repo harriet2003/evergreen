@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
 
-// Check if we are receiving an AJAX request for plant data
+//For plant data modal
 if (isset($_GET['plantName'])) {
    $plantName = $_GET['plantName'];
 
@@ -20,7 +20,7 @@ if (isset($_GET['plantName'])) {
    }
 
    $stmt->close();
-   exit; // Stop further execution for AJAX requests
+   exit;
 }
 
 // If not an AJAX request, continue with the regular page rendering
@@ -36,8 +36,8 @@ if ($result->num_rows > 0) {
    echo "No plants found";
 }
 
-session_start(); // Start session to access session variables
-
+//For success modal
+session_start();
 // Check if the user was redirected after planting a seedling
 $showSuccessModal = false;
 if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
@@ -91,7 +91,6 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
    </header>
 
    <main>
-
       <div id="forestFrame">
          <?php foreach ($plants as $plant): ?>
             <?php
@@ -138,7 +137,6 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
          </article>
       </div>
 
-
       <!-- SUCCESS MODAL -->
       <div id="successModal" class="modal">
          <div class="modal-content">
@@ -158,7 +156,6 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       </script>
 
       <?php
-      // Unset the session variable to prevent flashing on future page loads
       unset($_SESSION['lastPlantedSeedling']);
       ?>
    </main>

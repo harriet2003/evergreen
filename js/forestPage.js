@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 });
 
+//SUCCESS MODAL + FLASH
+
 document.addEventListener("DOMContentLoaded", function () {
    // Check if the modal should be shown
    if (showSuccessModal) {
@@ -57,29 +59,28 @@ document.addEventListener("DOMContentLoaded", function () {
    }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
    // Close the success modal
-   var successModal = document.getElementById('successModal');
-   var closeModalButton = document.getElementById('closeModal');
+   var successModal = document.getElementById("successModal");
+   var closeModalButton = document.getElementById("closeModal");
 
    closeModalButton.onclick = function () {
-      successModal.style.display = 'none';
+      successModal.style.display = "none";
 
       // If the last planted seedling exists, flash the corresponding image
       if (lastPlantedSeedling) {
-         var seedlingElements = document.querySelectorAll('.seedlingOutput img');
+         var seedlingElements = document.querySelectorAll(".seedlingOutput img");
 
-         seedlingElements.forEach(function(img) {
+         seedlingElements.forEach(function (img) {
             if (img.alt.toLowerCase() === lastPlantedSeedling.toLowerCase()) {
-               img.classList.add('flashing');
+               img.classList.add("flashing");
 
                // Remove flashing class after animation ends
-               img.addEventListener('animationend', function() {
-                  img.classList.remove('flashing');
+               img.addEventListener("animationend", function () {
+                  img.classList.remove("flashing");
                });
             }
          });
       }
    };
 });
-
