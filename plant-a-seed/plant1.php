@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <!-- Submit button -->
                 <div class="carousel-submit">
-                    <button type="submit" name="seedlingSubmit" class="button">Submit</button>
+                    <button type="submit" name="seedlingSubmit" class="button">Next</button>
                     <!-- Validation message (hidden initially) -->
                     <p id="validationMessage" style="color:#ff5c00; display:none; padding-bottom: 2rem;">Please select a
                         seedling

@@ -372,6 +372,18 @@ header {
     cursor: pointer;
 }
 
+#successModal .modal-content {
+    background-color: var(--lightGreen);
+    width: 66%;
+    color: var(--forest);
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 #shareButton {
     left: unset;
     right: 5%;
@@ -437,6 +449,24 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@keyframes flash {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.75);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.flashing {
+    animation: flash 0.8s ease 3;
 }
 
 /* CAROUSEL */
@@ -535,6 +565,11 @@ header {
     border-bottom: 2px solid white;
     text-align: center;
     margin-block: 3rem;
+}
+
+#plantSeedling2 input:focus,
+#plantSeedling3 input:focus {
+    outline-color: var(--cream);
 }
 
 #userName,
@@ -729,6 +764,11 @@ header {
     #helpPopup article {
         width: fit-content;
         padding-bottom: 2rem;
+    }
+
+    #successModal .modal-content {
+        width: 40vw;
+        padding-bottom: 4rem;
     }
 
     /* Seedling Data Modal styles */

@@ -1,3 +1,16 @@
+<?php
+session_start(); // Ensure session is started
+
+if (isset($_POST['plantButton'])) {
+    // Set a success message in the session
+    $_SESSION['plantSuccess'] = true;
+
+    // Redirect to ourForest.php
+    header("Location: ../ourForest.php");
+    exit(); // Ensure no further code is executed
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +22,6 @@
     <link rel="stylesheet" href="../css/typography.css" />
     <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/script.js" defer></script>
-    <script src="../js/chooseSeedling.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -46,7 +58,6 @@
         <div class="result">
             <div>
                 <?php
-                session_start(); // Ensure session is started
                 include '../connection.php';
 
                 // Check if the session contains the chosen seedling
@@ -91,9 +102,9 @@
 
 
                 if ($_SESSION == TRUE) {
-                    echo "<h6>" . $_SESSION["userComment"] . "</h6>";
-                    echo "<p>" . $_SESSION["userName"] . "</p>";
-                    echo "<p>" . $_SESSION["userLocation"] . "</p>";
+                    echo "<h6 class='resultContent'>" . $_SESSION["userComment"] . "</h6>";
+                    echo "<p class='resultContent'>" . $_SESSION["userName"] . "</p>";
+                    echo "<p class='resultContent'>" . $_SESSION["userLocation"] . "</p>";
                 }
 
                 $mysqli->close();
@@ -101,9 +112,11 @@
             </div>
         </div>
 
-        <a href="../ourForest.php" class="button" id="plantButton">Plant</a>
+        <form method="POST">
+            <button type="submit" name="plantButton" class="button" id="plantButton">Plant</button>
+        </form>
 
-        <button id="shareButton">Download & Share</button>
+        <!--<button id="shareButton">Download & Share</button>-->
     </main>
 </body>
 

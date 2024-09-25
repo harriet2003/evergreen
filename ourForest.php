@@ -35,6 +35,16 @@ if ($result->num_rows > 0) {
 } else {
    echo "No plants found";
 }
+
+session_start(); // Start session to access session variables
+
+// Check if the user was redirected after planting a seedling
+$showSuccessModal = false;
+if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
+   $showSuccessModal = true;
+   unset($_SESSION['plantSuccess']); // Unset the session variable so the modal doesn't show again on page refresh
+   $lastPlantedSeedling = isset($_SESSION['lastPlantedSeedling']) ? $_SESSION['lastPlantedSeedling'] : null;
+}
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +106,7 @@ if ($result->num_rows > 0) {
          <?php endforeach; ?>
       </div>
 
-      <!-- Modal Structure -->
+      <!-- SEEDLING DATA MODAL -->
       <div id="plantDataModal" class="modal">
          <span class="close">&times;</span>
          <div class="modal-content">
@@ -127,6 +137,30 @@ if ($result->num_rows > 0) {
                clicking PLANT+.</p>
          </article>
       </div>
+
+
+      <!-- SUCCESS MODAL -->
+      <div id="successModal" class="modal">
+         <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <article>
+               <h5>Planted!</h5>
+               <p>Thank you for planting your seed of hope. Remember, every action, no matter how small, makes an
+                  impact.
+                  Now, get out there and start planting seeds of change wherever you go!</p>
+            </article>
+         </div>
+      </div>
+
+      <script>
+         var showSuccessModal = <?php echo json_encode($showSuccessModal); ?>;
+         var lastPlantedSeedling = <?php echo json_encode($lastPlantedSeedling); ?>;
+      </script>
+
+      <?php
+      // Unset the session variable to prevent flashing on future page loads
+      unset($_SESSION['lastPlantedSeedling']);
+      ?>
    </main>
 
    <footer>

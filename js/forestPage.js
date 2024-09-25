@@ -37,45 +37,49 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 });
 
-/* RANDOM FOREST
-const svgFiles = [
-   "./images/Illustrations/fern.svg",
-   "./images/Illustrations/koru.svg",
-   "./images/Illustrations/kowhai.svg",
-   "./images/Illustrations/manuka.svg",
-   "./images/Illustrations/pohutakawa.svg",
-   "./images/Illustrations/rata.svg",
-];
+document.addEventListener("DOMContentLoaded", function () {
+   // Check if the modal should be shown
+   if (showSuccessModal) {
+      const modal = document.getElementById("successModal");
+      modal.style.display = "block";
 
-const container = document.getElementById("forest");
-const numImages = 20; // Number of images to place on the background
+      // Close the modal when clicking the 'x' button
+      document.getElementById("closeModal").onclick = function () {
+         modal.style.display = "none";
+      };
 
-function getRandomSize() {
-   return Math.random() * 100 + 50; // Random size between 50px and 150px
-}
-
-function getRandomPosition(max) {
-   return Math.random() * max; // Random position within the container
-}
-
-function createBackgroundElement(src) {
-   const div = document.createElement("div");
-   div.classList.add("background-image");
-   div.style.backgroundImage = `url(${src})`;
-   div.style.width = `${getRandomSize()}px`;
-   div.style.height = `${getRandomSize()}px`;
-   div.style.position = "absolute";
-   div.style.top = `${getRandomPosition(window.innerHeight)}px`;
-   div.style.left = `${getRandomPosition(window.innerWidth)}px`;
-   return div;
-}
-
-function populateBackground() {
-   for (let i = 0; i < numImages; i++) {
-      const randomIndex = Math.floor(Math.random() * svgFiles.length);
-      const bgElement = createBackgroundElement(svgFiles[randomIndex]);
-      container.appendChild(bgElement);
+      // Close the modal when clicking anywhere outside of the modal content
+      window.onclick = function (event) {
+         if (event.target === modal) {
+            modal.style.display = "none";
+         }
+      };
    }
-}
+});
 
-window.onload = populateBackground;*/
+document.addEventListener('DOMContentLoaded', function () {
+   // Close the success modal
+   var successModal = document.getElementById('successModal');
+   var closeModalButton = document.getElementById('closeModal');
+
+   closeModalButton.onclick = function () {
+      successModal.style.display = 'none';
+
+      // If the last planted seedling exists, flash the corresponding image
+      if (lastPlantedSeedling) {
+         var seedlingElements = document.querySelectorAll('.seedlingOutput img');
+
+         seedlingElements.forEach(function(img) {
+            if (img.alt.toLowerCase() === lastPlantedSeedling.toLowerCase()) {
+               img.classList.add('flashing');
+
+               // Remove flashing class after animation ends
+               img.addEventListener('animationend', function() {
+                  img.classList.remove('flashing');
+               });
+            }
+         });
+      }
+   };
+});
+

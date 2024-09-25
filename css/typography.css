@@ -154,6 +154,10 @@ input {
     margin-top: 0;
 }
 
+.resultContent{
+    text-transform: capitalize;
+}
+
 .result div p {
     font-weight: 300;
 }
