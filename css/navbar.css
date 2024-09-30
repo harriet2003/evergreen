@@ -87,7 +87,7 @@ nav i {
     font-weight: 600;
 }
 
-.chooseSeedling nav{
+.chooseSeedling nav {
     margin-bottom: 2rem;
 }
 
@@ -124,7 +124,7 @@ nav i {
         cursor: pointer;
     }
 
-    .desktopNav div a:hover{
+    .desktopNav div a:hover {
         text-decoration: underline;
         text-underline-offset: 0.5rem;
     }
@@ -133,7 +133,7 @@ nav i {
         font-size: 4rem;
     }
 
-    .chooseSeedling nav{
+    .chooseSeedling nav {
         margin-bottom: 0rem;
     }
 }

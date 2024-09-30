@@ -5,10 +5,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'evergreen_db';
+$db_host = 'localhost:3306';
+$db_user = 'evergreen';
+$db_password = '@Booboo3';
+$db_db = 'harriet-e_evergreen_db';
 
 $mysqli = @new mysqli(
   $db_host,

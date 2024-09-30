@@ -234,7 +234,7 @@ header {
 .plantSeedlingPage,
 .seedlingResult {
     height: 100vh;
-    background-image: url(../images/forestBackground.jpg);
+    background-image: url(../images/forest-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -318,7 +318,6 @@ header {
     cursor: pointer;
 }
 
-
 .forestPage footer {
     width: 100%;
     display: flex;
@@ -393,7 +392,7 @@ header {
 
 /* PLANT A SEEDLING PAGE */
 .plantSeedlingPage {
-    background-image: url(../images/forestBackgroundBlur.jpg);
+    background-image: url(../images/forest-background-blur.jpg);
 }
 
 .plantSeedlingPage main {
@@ -450,8 +449,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 
 /* CAROUSEL */
 .carousel-container {

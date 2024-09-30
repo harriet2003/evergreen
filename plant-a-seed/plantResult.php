@@ -67,8 +67,8 @@ if (isset($_POST['plantButton'])) {
                     $plantImages = [
                         "Fern" => "../images/illustrations/fern.svg",
                         "Pohutukawa" => "../images/illustrations/pohutukawa.svg",
-                        "Kōwhai" => "../images/illustrations/kōwhai.svg",
-                        "Mānuka" => "../images/illustrations/mānuka.svg",
+                        "Kowhai" => "../images/illustrations/kowhai.svg",
+                        "Manuka" => "../images/illustrations/manuka.svg",
                         "Rata" => "../images/illustrations/rata.svg",
                         "Koru" => "../images/illustrations/koru.svg"
                     ];

@@ -23,7 +23,6 @@ if (isset($_GET['plantName'])) {
    exit;
 }
 
-// If not an AJAX request, continue with the regular page rendering
 $sql = "SELECT chosenSeedling FROM user_seedling";
 $result = $mysqli->query($sql);
 

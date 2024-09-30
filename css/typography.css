@@ -77,6 +77,11 @@ a {
     margin: 0;
 }
 
+#landing div h5 {
+    font-size: 1rem;
+}
+
+
 /* INTRO */
 .intro {
     color: white;
@@ -154,7 +159,7 @@ input {
     margin-top: 0;
 }
 
-.resultContent{
+.resultContent {
     text-transform: capitalize;
 }
 
@@ -187,19 +192,21 @@ input {
 }
 
 /* DATA */
-#totalSeedlings h5{
+#totalSeedlings h5 {
     text-transform: uppercase;
     margin-top: 100px;
 }
 
-#totalSeedlings h1{
+#totalSeedlings h1 {
     margin: 0;
     font-size: 8rem;
 }
 
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
-    h1,  #totalSeedlings h1 {
+
+    h1,
+    #totalSeedlings h1 {
         font-size: 8rem;
     }
 
@@ -214,6 +221,10 @@ input {
     .introText h5 {
         width: 50%;
         text-align: center;
+    }
+
+    #landing div h5 {
+        font-size: 1.5rem;
     }
 
     .plantSeedlingPage main h5,

@@ -80,13 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <p>Pohutukawa</p>
                     </div>
 
-                    <div class="carousel-slide" data-plant="Kōwhai">
-                        <img src="../images/illustrations/kōwhai.svg" alt="image of kowhai seedling">
+                    <div class="carousel-slide" data-plant="Kowhai">
+                        <img src="../images/illustrations/kowhai.svg" alt="image of kōwhai seedling">
                         <p>Kōwhai</p>
                     </div>
 
-                    <div class="carousel-slide" data-plant="Mānuka">
-                        <img src="../images/illustrations/mānuka.svg" alt="image of manuka seedling">
+                    <div class="carousel-slide" data-plant="Manuka">
+                        <img src="../images/illustrations/manuka.svg" alt="image of mānuka seedling">
                         <p>Mānuka</p>
                     </div>
 
@@ -137,8 +137,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 const plantFacts = {
                     "Fern": "A well known symbol of New Zealand, ferns are essential for preventing soil erosion with their strong root systems. Their lush fronds enhance the landscape and help stabilise the ground.",
                     "Pohutukawa": 'Known as the "New Zealand Christmas tree," the Pohutukawa bursts into vibrant red flowers each December. It’s not only visually striking but also provides important nectar for native birds, supporting the ecosystem.',
-                    "Kōwhai": "The Kōwhai tree, with its eye-catching yellow flowers, plays a key role in the environment by attracting bees and birds. This helps pollinate other plants and keeps the ecosystem healthy.",
-                    "Mānuka": "Famous for its medicinal honey, the Mānuka also benefits the environment by helping prevent soil erosion. Its hardy roots contribute to soil stability and overall land health.",
+                    "Kowhai": "The Kōwhai tree, with its eye-catching yellow flowers, plays a key role in the environment by attracting bees and birds. This helps pollinate other plants and keeps the ecosystem healthy.",
+                    "Manuka": "Famous for its medicinal honey, the Mānuka also benefits the environment by helping prevent soil erosion. Its hardy roots contribute to soil stability and overall land health.",
                     "Rata": "The Rata tree, with its brilliant red blooms, is a vital part of New Zealand’s forests. It offers habitats for native wildlife and adds to the country’s rich natural beauty.",
                     "Koru": "The Koru, the unfurling frond of the silver fern, symbolizes new beginnings and growth. Its spiral shape is a traditional Māori design, reflecting the continuous cycle of life and the environment."
                 };
