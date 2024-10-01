@@ -113,10 +113,8 @@ if (isset($_POST['plantButton'])) {
         </div>
 
         <form method="POST">
-            <button type="submit" name="plantButton" class="button" id="plantButton">Plant</button>
+            <button type="submit" name="plantButton" class="button" id="plantButton">Plant Seedling</button>
         </form>
-
-        <!--<button id="shareButton">Download & Share</button>-->
     </main>
 </body>
 

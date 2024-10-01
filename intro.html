@@ -31,6 +31,24 @@
 
             <a href="ourForest.php" class="button" id="introButton">Explore</a>
          </div>
+
+         <button id="musicButton" style="color: black">Want to hear some music?</button>
+         <audio id="ambientMusic" src="music.mp3" type="audio/mpeg" autoplay></audio>
+
+         <script>
+            const audio = document.getElementById("ambientMusic");
+            const musicButton = document.getElementById("musicButton");
+
+            button.addEventListener("click", () => {
+               if (audio.paused) {
+                  audio.play();
+                  button.textContent = "Click again for silence";
+               } else {
+                  audio.pause();
+                  button.textContent = "Want to hear some music?";
+               }
+            });
+         </script>
       </main>
 
       <footer>

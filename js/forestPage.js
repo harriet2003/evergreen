@@ -36,6 +36,25 @@ document.addEventListener("DOMContentLoaded", function () {
       sessionStorage.setItem("buttonClicked", "true");
    });
 });
+//HOVER RUSTLE SOUND
+document.addEventListener("DOMContentLoaded", function () {
+   const rustleAudio = document.getElementById("rustleAudio");
+
+   // Play the rustling audio on hover
+   window.playRustleAudio = function () {
+      if (rustleAudio) {
+         rustleAudio.play();
+      }
+   };
+
+   // Stop the rustling audio on hover out
+   window.stopRustleAudio = function () {
+      if (rustleAudio) {
+         rustleAudio.pause();
+         rustleAudio.currentTime = 0; // Reset the audio to the start
+      }
+   };
+});
 
 //SUCCESS MODAL
 
@@ -58,4 +77,3 @@ document.addEventListener("DOMContentLoaded", function () {
       };
    }
 });
-

@@ -49,6 +49,23 @@ header {
     cursor: pointer;
 }
 
+.secondaryButton {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white !important;
+}
+
+.secondaryButton:hover {
+    background-color: var(--lightGreen);
+    border: 1px solid var(--lightGreen);
+    color: var(--forest) !important;
+}
+
+.closeSuccessButton:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
 .hideOnMobile {
     display: none;
 }
@@ -118,7 +135,7 @@ header {
 
 #birdButton,
 #toPlantButton,
-#shareButton {
+#musicButton {
     background-color: var(--offwhite);
     border-radius: 50%;
     border: 0;
@@ -138,16 +155,21 @@ header {
 
 #birdButton:hover,
 #toPlantButton:hover,
-#shareButton:hover {
+#musicButton:hover {
     background-color: var(--salmon);
     transition-duration: 0.5s;
     cursor: pointer;
 }
 
+#musicButton {
+    z-index: 5;
+    bottom: 20%;
+}
+
 
 /* INTRO */
 .intro {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -233,7 +255,7 @@ header {
 .forestPage,
 .plantSeedlingPage,
 .seedlingResult {
-    height: 100vh;
+    height: 100%;
     background-image: url(../images/forest-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,16 +326,20 @@ header {
 }
 
 .close {
+    width: 2rem;
+    height: 2rem;
     float: right;
     align-self: flex-end;
     font-size: 2rem;
-    font-weight: bold;
-    padding-bottom: 2rem;
+    text-align: center;
+    transition: 0.25s ease;
 }
 
 .close:hover,
 .close:focus {
-    color: white;
+    font-weight: 500;
+    transform: scale(1.15);
+    color: var(--green);
     text-decoration: none;
     cursor: pointer;
 }
@@ -333,7 +359,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 #arrow {
@@ -589,7 +615,6 @@ header {
     padding-bottom: 2rem;
 }
 
-
 /* ABOUT PAGE */
 .aboutPage {
     height: 100vh;
@@ -606,7 +631,7 @@ header {
 }
 
 .aboutPage article:first-child {
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 #actions {
@@ -648,8 +673,7 @@ header {
     filter: saturate(0) brightness(100);
 }
 
-.aboutPage footer,
-.dataPage footer {
+.aboutPage footer {
     text-align: center;
     padding: 0 1rem 2rem 1rem;
     color: var(--lime);
@@ -664,6 +688,7 @@ header {
     background-position: center;
     background-attachment: fixed;
     color: white;
+    overflow: hidden;
 }
 
 #totalSeedlings {
@@ -695,12 +720,18 @@ header {
     }
 
     #birdButton,
-    #toPlantButton {
+    #toPlantButton,
+    #musicButton {
         font-size: 0.8rem;
         width: 110px;
         height: 110px;
         bottom: 10%;
         left: 5%;
+    }
+
+    #musicButton {
+        left: 10%;
+        top: 20%;
     }
 
     /* INTRO */
@@ -939,5 +970,76 @@ header {
         margin-block: 100px;
     }
 
+}
 
+/* Jiggle animation */
+@-webkit-keyframes jiggle {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes jiggle {
+    15% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+
+    30% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+
+    65% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    80% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.jiggle:hover {
+    -webkit-animation: jiggle 1s ease;
+    animation: jiggle 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }

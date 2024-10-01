@@ -58,7 +58,7 @@ session_start();
 
 
             <div class="formButtons">
-                <button type="button" id="prevBtn1" class="button">Back</button>
+                <button type="button" id="prevBtn1" class="button secondaryButton">Back</button>
                 <button type="submit" name="submitComment" id="nextBtn1" class="button">Next</button>
             </div>
 

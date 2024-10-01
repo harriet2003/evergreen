@@ -23,7 +23,7 @@ if (isset($_GET['plantName'])) {
    exit;
 }
 
-$sql = "SELECT chosenSeedling FROM user_seedling";
+$sql = "SELECT chosenSeedling FROM user_seedling ORDER BY RAND() LIMIT 20";
 $result = $mysqli->query($sql);
 
 $plants = [];
@@ -97,11 +97,15 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
             $size = rand(100, 250);
             ?>
             <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
+               onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()"
                onclick="showDataModal('<?= strtolower($plant) ?>')">
-               <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;">
+               <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;"
+                  id="forestImage">
             </div>
          <?php endforeach; ?>
+         <audio id="rustleAudio" src="rustle.mp3" type="audio/mpeg"></audio>
       </div>
+
 
       <!-- SEEDLING DATA MODAL -->
       <div id="plantDataModal" class="modal">
@@ -138,13 +142,14 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       <!-- SUCCESS MODAL -->
       <div id="successModal" class="modal">
          <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
             <article>
                <h5>Planted!</h5>
                <p>Thank you for planting your seed of hope. Remember, every action, no matter how small, makes an
                   impact.
                   Now, get out there and start planting seeds of change wherever you go!</p>
             </article>
+            <button class="button closeSuccessButton" id="closeModal"
+               style="font-size: 1rem; margin-top: 2rem; background-color: transparent;">Back to Forest</button>
          </div>
       </div>
 

@@ -55,23 +55,18 @@ if ($result->num_rows > 0) {
         </div>
     </header>
 
-    <main>
-        <section id="totalSeedlings">
+    <main class="hidden">
+        <section id="totalSeedlings" class="hidden">
             <h5>Number of seedlings of hope planted</h5>
             <h1><?php echo $totalSeedlings; ?></h1>
-            <button id="toPlantButton">Plant a seedling now</button>
+            <button id="toPlantButton">Plant your seedling now</button>
         </section>
 
-        <section id="moreToCome">
-            <h5>More data about your seedlings to come</h5>
+        <section id="moreToCome" class="hidden">
+            <p>More data about your seedlings to come</p>
         </section>
 
     </main>
-
-    <footer>
-        <h3>Plant the seed for a better future</h3>
-    </footer>
-
     <script>
         const button = document.getElementById("toPlantButton");
 
