@@ -183,6 +183,17 @@ input {
 }
 
 /* ABOUT */
+.aboutPage article:first-child h5 {
+    color: var(--lightGreen);
+}
+
+.aboutPage footer h2 {
+    color: var(--lime);
+    width: 66%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
 .actionBox h6 {
     margin-block: 1rem 0.5rem;
 }
@@ -259,6 +270,11 @@ input {
     }
 
     /* ABOUT PAGE */
+    .aboutPage h5 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+
     .actionBox h6 {
         font-size: 1.25rem;
         font-weight: 500;

@@ -135,7 +135,8 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
             </p>
             <p>
                Drag and click to expand on the seedlings and plant your own seed of hope in the digital forest by
-               clicking PLANT+.</p>
+               clicking PLANT+. </p>
+            <p>When you plant this digital seedling, we will plant a real seed to bring our nature back to life.</p>
          </article>
       </div>
 

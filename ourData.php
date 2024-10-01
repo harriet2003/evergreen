@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evergreen - Your Data</title>
+    <title>Evergreen - Our Data</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/typography.css" />
     <link rel="stylesheet" href="css/navbar.css" />

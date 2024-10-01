@@ -409,12 +409,6 @@ header {
     text-align: center;
 }
 
-#shareButton {
-    left: unset;
-    right: 5%;
-    bottom: 15%;
-    transform: rotate(15deg);
-}
 
 /* PLANT A SEEDLING PAGE */
 .plantSeedlingPage {
@@ -617,21 +611,37 @@ header {
 
 /* ABOUT PAGE */
 .aboutPage {
+    width: 100vw;
+    margin: 0;
     height: 100vh;
-    background-image: url(../images/aboutBackground.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #194923;
     color: white;
 }
 
 .aboutPage main {
     animation: fade-in 1s forwards;
+    margin: 0;
 }
 
 .aboutPage article:first-child {
-    margin-bottom: 7rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-block: 5rem 7rem;
+    margin-inline: 2rem;
+}
+
+.aboutPage article:first-child img {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover;
+}
+
+#actionArticle {
+    padding: 2rem;
+    background-image: url(../images/aboutBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #actions {
@@ -674,9 +684,12 @@ header {
 }
 
 .aboutPage footer {
-    text-align: center;
-    padding: 0 1rem 2rem 1rem;
-    color: var(--lime);
+    width: 100vw !important;
+    background-color: #172a28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
 }
 
 /* DATA PAGE*/
@@ -942,6 +955,17 @@ header {
 
     /* ABOUT PAGE */
     .aboutPage article:first-child {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: 4rem;
+    }
+
+    .aboutPage article:first-child div {
+        width: 40%;
+    }
+
+    .aboutPage article:first-child img {
         width: 40%;
     }
 
@@ -955,6 +979,10 @@ header {
         padding-top: 2rem;
         width: 50%;
         margin: 0 auto;
+    }
+
+    .aboutPage footer {
+        padding-block: 4rem 6rem;
     }
 
     /* DATA PAGE */
