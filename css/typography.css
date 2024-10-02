@@ -187,7 +187,8 @@ input {
     color: var(--lightGreen);
 }
 
-.aboutPage footer h2 {
+.aboutPage footer h2,
+.dataPage footer h2 {
     color: var(--lime);
     width: 66%;
     text-align: center;

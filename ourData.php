@@ -59,13 +59,14 @@ if ($result->num_rows > 0) {
         <section id="totalSeedlings" class="hidden">
             <h5>Number of seedlings of hope planted</h5>
             <h1><?php echo $totalSeedlings; ?></h1>
-            <button id="toPlantButton">Plant your seedling now</button>
         </section>
 
-        <section id="moreToCome" class="hidden">
-            <p>More data about your seedlings to come</p>
+        <section id="blurb" class="hidden">
+            <p>For every seedling of hope you plant on this website, we will plant a real life seedling to regenerate
+                the beautiful nature found in Aotearoa. So, every small thing you do will make a difference.</p>
         </section>
-
+        
+        <button id="toPlantButton">Plant your seedling now</button>
     </main>
     <script>
         const button = document.getElementById("toPlantButton");
@@ -74,6 +75,12 @@ if ($result->num_rows > 0) {
             window.location.href = "plant-a-seed/plant1.php";
         });
     </script>
+
+    <footer>
+        <h2>You can make a difference</h2>
+        <h6 style="text-align: center">Plant the seed for a better future.<br />And we'll plant one for real.</h6>
+        <a href="plant-a-seed/plant1.php" class="button">Plant a Seedling</a>
+    </footer>
 </body>
 
 </html>

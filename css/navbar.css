@@ -91,7 +91,6 @@ nav i {
     margin-bottom: 2rem;
 }
 
-
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
     .mobileNav {
@@ -127,6 +126,16 @@ nav i {
     .desktopNav div a:hover {
         text-decoration: underline;
         text-underline-offset: 0.5rem;
+    }
+
+    .fixedNav {
+        position: fixed;
+        top: 0;
+        width: 95%;
+        transition: top 0.3s;
+        padding-top: 1rem;
+        align-items: center;
+        z-index: 2;
     }
 
     .biggerTitle {

@@ -10,6 +10,22 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
+/* FIXED NAVBAR ANIMATION */
+let prevScrollpos = window.pageYOffset;
+const navbar = document.querySelector(".fixedNav");
+
+window.onscroll = function () {
+   let currentScrollPos = window.pageYOffset;
+
+   if (prevScrollpos > currentScrollPos) {
+      navbar.style.top = "0";
+   } else {
+      navbar.style.top = "-70px";
+   }
+
+   prevScrollpos = currentScrollPos;
+};
+
 /* INTRO ARRAY */
 const introSlides = [
    "New Zealand's environment is special. Having been isolated from the rest of the world for over 80 million years, unique nature and wildlife forms have evolved to create the Aotearoa we know today.",

@@ -683,7 +683,8 @@ header {
     filter: saturate(0) brightness(100);
 }
 
-.aboutPage footer {
+.aboutPage footer,
+.dataPage footer {
     width: 100vw !important;
     background-color: #172a28;
     display: flex;
@@ -698,7 +699,7 @@ header {
     background-image: url(../images/dataBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
     color: white;
     overflow: hidden;
@@ -711,13 +712,13 @@ header {
 
 #toPlantButton {
     left: unset;
-    bottom: unset;
+    bottom: 0;
     right: 10%;
     transform: rotate(15deg);
 }
 
-#moreToCome {
-    margin-block: 200px;
+#blurb {
+    margin-block: 50px 100px;
     text-align: center;
 }
 
@@ -979,9 +980,6 @@ header {
         padding-top: 2rem;
         width: 50%;
         margin: 0 auto;
-    }
-
-    .aboutPage footer {
         padding-block: 4rem 6rem;
     }
 
@@ -994,7 +992,9 @@ header {
         transform: rotate(15deg);
     }
 
-    #moreToCome {
+    #blurb {
+        width: 40vw;
+        margin: 0 auto;
         margin-block: 100px;
     }
 
