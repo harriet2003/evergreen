@@ -21,10 +21,15 @@ function closeHelpPopup() {
 
 /* Plant+ Click Check */
 document.addEventListener("DOMContentLoaded", function () {
+   document.getElementById("arrow").onclick = function () {
+      window.location.href = "../plant-a-seed/plant1.php";
+   };
+
    // Check if the button has been clicked in this session
    if (!sessionStorage.getItem("buttonClicked")) {
       // Show the arrow icon
       document.getElementById("arrow").style.opacity = "100%";
+      document.getElementById("arrow").style.cursor = "pointer";
    }
 
    // Add event listener for button click

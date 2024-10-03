@@ -91,6 +91,14 @@ nav i {
     margin-bottom: 2rem;
 }
 
+.questionLayout .mobileNav {
+    margin: 0;
+}
+
+.seedlingResult .mobileNav {
+    margin-bottom: 3rem;
+}
+
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
     .mobileNav {

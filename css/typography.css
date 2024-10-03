@@ -126,6 +126,7 @@ a {
 
 .plantSeedlingPage main h5 {
     text-align: center;
+    margin-block: 0;
 }
 
 #learnMoreBtn {
@@ -155,7 +156,7 @@ input {
     font-size: 1rem;
 }
 
-.question {
+.question, .seedlingResult h5 {
     margin-top: 0;
 }
 
@@ -239,11 +240,14 @@ input {
         font-size: 1.5rem;
     }
 
-    .plantSeedlingPage main h5,
+    .plantSeedlingPage main h5 {
+        font-size: 2rem;
+        margin-block: 2rem;
+    }
+
     .seedlingResult h5 {
         font-size: 2rem;
         margin-top: 0;
-
     }
 
     .seedlingSelection i {

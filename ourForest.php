@@ -92,15 +92,15 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       <div id="forestFrame">
          <?php foreach ($plants as $plant): ?>
             <?php
-            $top = rand(0, 60);
-            $left = rand(0, 85);
-            $size = rand(100, 250);
+            $top = rand(10, 50);  // Adjust to ensure there's padding from the top and bottom
+            $left = rand(10, 90); // Adjust to ensure there's padding from the left and right
+            $size = rand(100, 250);     // Maintain random size between 100 and 250px
             ?>
             <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
                onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()"
                onclick="showDataModal('<?= strtolower($plant) ?>')">
                <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;"
-                  id="forestImage">
+                  id="forestImage" class="jiggle">
             </div>
          <?php endforeach; ?>
          <audio id="rustleAudio" src="rustle.mp3" type="audio/mpeg"></audio>
@@ -145,9 +145,9 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
          <div class="modal-content">
             <article>
                <h5>Planted!</h5>
-               <p>Thank you for planting your seed of hope. Remember, every action, no matter how small, makes an
-                  impact.
-                  Now, get out there and start planting seeds of change wherever you go!</p>
+               <p>Thank you for planting your seed of hope. And guess what, a real seed will be planted now because of
+                  your small action. Remember, you can make a difference so get out there and start planting seeds of
+                  change wherever you go!</p>
             </article>
             <button class="button closeSuccessButton" id="closeModal"
                style="font-size: 1rem; margin-top: 2rem; background-color: transparent;">Back to Forest</button>
@@ -172,7 +172,7 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
          <a href="plant-a-seed/plant1.php" id="plantButton">Plant+</a>
       </div>
 
-      <h6 onclick="openHelpPopup()" class="popup">Help</h6>
+      <h6 onclick="openHelpPopup()" class="popup" style="margin-bottom: 0.5rem;">Help</h6>
    </footer>
 
    <script>
