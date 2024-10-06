@@ -2,19 +2,19 @@
 include 'connection.php';
 
 //For plant data modal
-if (isset($_GET['plantName'])) {
-   $plantName = $_GET['plantName'];
+if (isset($_GET['plantId'])) {
+   $plantId = $_GET['plantId'];
 
    // Prepare the SQL query to fetch the relevant data
-   $sql = "SELECT userName, userLocation, userComment FROM user_seedling WHERE chosenSeedling = ?";
+   $sql = "SELECT userName, userLocation, userComment, chosenSeedling FROM user_seedling WHERE id = ?";
    $stmt = $mysqli->prepare($sql);
-   $stmt->bind_param('s', $plantName);
+   $stmt->bind_param('i', $plantId);  // 'i' for integer type
    $stmt->execute();
    $result = $stmt->get_result();
 
    if ($result->num_rows > 0) {
       $data = $result->fetch_assoc();
-      echo json_encode($data);
+      echo json_encode($data);  // Make sure chosenSeedling is included here
    } else {
       echo json_encode(['error' => 'No data found']);
    }
@@ -23,13 +23,14 @@ if (isset($_GET['plantName'])) {
    exit;
 }
 
-$sql = "SELECT chosenSeedling FROM user_seedling ORDER BY RAND() LIMIT 20";
+
+$sql = "SELECT id, chosenSeedling FROM user_seedling ORDER BY RAND() LIMIT 20";
 $result = $mysqli->query($sql);
 
 $plants = [];
 if ($result->num_rows > 0) {
    while ($row = $result->fetch_assoc()) {
-      $plants[] = $row['chosenSeedling'];
+      $plants[] = $row;  // Store the entire row, including the id and chosenSeedling
    }
 } else {
    echo "No plants found";
@@ -97,10 +98,9 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
             $size = rand(100, 250);     // Maintain random size between 100 and 250px
             ?>
             <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
-               onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()"
-               onclick="showDataModal('<?= strtolower($plant) ?>')">
-               <img src="images/illustrations/<?= strtolower($plant) ?>.svg" alt="<?= $plant ?>" style="width: 100%;"
-                  id="forestImage" class="jiggle">
+               onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
+               <img src="images/illustrations/<?= strtolower($plant['chosenSeedling']) ?>.svg"
+                  alt="<?= $plant['chosenSeedling'] ?>" style="width: 100%;" id="forestImage" class="jiggle">
             </div>
          <?php endforeach; ?>
          <audio id="rustleAudio" src="rustle.mp3" type="audio/mpeg"></audio>
@@ -192,11 +192,11 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
          };
       });
 
-      function showDataModal(plantName) {
+      function showDataModal(plantId) {
          var modal = document.getElementById("plantDataModal");
 
-         // Fetch plant data from the same PHP file using plantName
-         fetch('ourForest.php?plantName=' + plantName)
+         // Fetch plant data from the same PHP file using plantId
+         fetch('ourForest.php?plantId=' + plantId)
             .then(response => response.json())
             .then(data => {
                if (data.error) {
@@ -211,14 +211,18 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
 
                // Update the modal image to match the clicked plant
                var modalImage = document.getElementById("modalPlantImage");
-               modalImage.src = 'images/illustrations/' + plantName + '.svg'; // Dynamically set image based on plant name
-               modalImage.alt = plantName; // Update alt text too
+
+               if (data.chosenSeedling) {
+                  modalImage.src = 'images/illustrations/' + data.chosenSeedling.toLowerCase() + '.svg'; // Dynamically set image based on plant name
+                  modalImage.alt = data.chosenSeedling; // Update alt text too
+               }
 
                // Display the modal
                modal.style.display = "block";
             })
             .catch(error => console.error('Error fetching plant data:', error));
       }
+
    </script>
 </body>
 
