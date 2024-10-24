@@ -34,21 +34,6 @@
 
          <button id="musicButton" style="color: black">Click for silence</button>
          <audio id="ambientMusic" src="music.mp3" type="audio/mpeg" autoplay></audio>
-
-         <script>
-            const audio = document.getElementById("ambientMusic");
-            const musicButton = document.getElementById("musicButton");
-
-            musicButton.addEventListener("click", () => {
-               if (audio.paused) {
-                  audio.play();
-                  musicButton.textContent = "Click for silence";
-               } else {
-                  audio.pause();
-                  musicButton.textContent = "Click to hear some music?";
-               }
-            });
-         </script>
       </main>
 
       <footer>
@@ -67,6 +52,18 @@
       </footer>
 
       <script>
+         const audio = document.getElementById("ambientMusic");
+         const musicButton = document.getElementById("musicButton");
+
+         musicButton.addEventListener("click", () => {
+            if (audio.paused) {
+               audio.play();
+               musicButton.textContent = "Click for silence";
+            } else {
+               audio.pause();
+               musicButton.textContent = "Click to hear some music?";
+            }
+         });
          const button = document.getElementById("nextArrow");
          const changingContent = document.getElementById("changingContent");
 

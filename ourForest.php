@@ -130,7 +130,7 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
             <p>Welcome to Our Forest, Our Ngāherehere.
             </p>
             <p>
-               Wonder and explore through native flora and fauna and uncover what nature means to our country - their
+               Wander and explore through native flora and fauna and uncover what nature means to our country - their
                unique hopes, memories and loves.
             </p>
             <p>
