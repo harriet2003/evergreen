@@ -137,7 +137,7 @@ header {
 
 #birdButton,
 #toPlantButton,
-#musicButton{
+#musicButton {
     background-color: var(--offwhite);
     border-radius: 50%;
     border: 0;
@@ -997,8 +997,115 @@ header {
         margin: 0 auto;
         margin-block: 100px;
     }
-
 }
+
+/*IMAC LAYOUT*/
+@media screen and (width > 2000px) {
+
+    #birdButton,
+    #toPlantButton,
+    #musicButton {
+        font-size: 1rem;
+        width: 130px;
+        height: 130px;
+        bottom: 20%;
+        left: 10%;
+    }
+
+    .intro {
+        padding: 2rem;
+    }
+
+    .forestPage footer {
+        padding-inline: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    #plantDataModal,
+    #helpPopup {
+        max-width: 750px;
+    }
+
+    .dataPage {
+        height: 100vh;
+    }
+
+    .dataPage main {
+        padding-block: 5rem;
+    }
+
+    #toPlantButton {
+        left: unset;
+        bottom: unset;
+        right: 10%;
+        transform: rotate(15deg);
+    }
+
+    .aboutPage article:first-child {
+        margin-top: 10rem;
+        padding-inline: 4rem;
+    }
+
+    .aboutPage article:first-child img {
+        max-width: 650px;
+    }
+
+    #actionArticle {
+        padding-inline: 6rem;
+    }
+
+    #actions {
+        gap: 3rem;
+    }
+
+    .actionBox {
+        max-width: 400px;
+        gap: 0.75rem;
+    }
+
+    .plantSeedlingPage {
+        overflow-y: hidden;
+    }
+
+    .chooseSeedling main {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    #plantSelectionForm {
+        padding-bottom: 10rem;
+    }
+
+    .carousel {
+        width: 30vw;
+    }
+
+    #plantModal .modal-content,
+    #successModal .modal-content {
+        max-width: 700px;
+    }
+
+    #plantSeedling2,
+    #plantSeedling3 {
+        width: 35vw;
+    }
+
+    #plantSeedling2 input,
+    #plantSeedling3 input {
+        width: 25vw;
+        margin-top: 3rem !important;
+    }
+
+    .desktopProgress {
+        margin-right: 2rem;
+    }
+
+    .result {
+        width: 66vw;
+    }
+}
+
+
 
 /* Jiggle animation */
 @-webkit-keyframes jiggle {

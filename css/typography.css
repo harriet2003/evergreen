@@ -156,7 +156,8 @@ input {
     font-size: 1rem;
 }
 
-.question, .seedlingResult h5 {
+.question,
+.seedlingResult h5 {
     margin-top: 0;
 }
 
@@ -288,4 +289,86 @@ input {
     .actionBox p {
         font-size: 1rem;
     }
+}
+
+
+/*IMAC LAYOUT*/
+@media screen and (width > 2000px) {
+    .button {
+        font-size: 1.7rem;
+    }
+
+    #landing h1 {
+        font-size: 10rem;
+    }
+
+    #landing h5 {
+        font-size: 2rem !important;
+    }
+
+    .intro header a,
+    .closeSuccessButton {
+        font-size: 1.25rem !important;
+    }
+
+    .introText h5 {
+        width: 40%;
+        font-size: 1.75rem;
+    }
+
+    #nextArrow,
+    #arrow {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+
+    #skip {
+        font-size: 1.5rem;
+    }
+
+    #plantButton {
+        font-size: 3rem;
+    }
+
+    h5 {
+        font-size: 2rem;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    .actionBox p {
+        font-size: 1.2rem;
+    }
+
+    .actionBox h6 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .carousel-slide p {
+        font-size: 1.5rem;
+    }
+
+    #learnMoreBtn {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .seedlingResult main h5 {
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+
+    .result div:nth-child(2) p,
+    #plantName {
+        font-size: 1.5rem;
+    }
+
+    .result div:nth-child(2) h6 {
+        font-size: 2.25rem;
+    }
+
 }
