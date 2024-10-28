@@ -95,7 +95,7 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
             <?php
             $top = rand(10, 50);  // Adjust to ensure there's padding from the top and bottom
             $left = rand(10, 90); // Adjust to ensure there's padding from the left and right
-            $size = rand(100, 250);     // Maintain random size between 100 and 250px
+            $size = rand(100, 200);     // Maintain random size between 100 and 250px
             ?>
             <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
                onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">

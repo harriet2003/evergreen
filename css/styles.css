@@ -40,6 +40,7 @@ header {
     padding: 0.75rem 1.25rem;
     min-width: 150px;
     background-color: white;
+    border: 1px solid white;
     border: none;
 }
 
@@ -265,18 +266,19 @@ header {
 #forestFrame {
     animation: fade-in 1s forwards;
     position: relative;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
-    margin: 0;
+    overflow: hidden;
+    padding: 10px;
 }
 
 .seedlingOutput {
     position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
     max-width: 200px;
-    transition: filter 0.25s ease-in;
     z-index: 9999;
     pointer-events: auto;
-    /* Ensures the image can be interacted with */
 }
 
 .seedlingOutput:hover {
@@ -404,6 +406,22 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.flash-seedling {
+    animation: flash 1s ease-in-out infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.75);
+    }
 }
 
 
@@ -541,6 +559,7 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
+
 }
 
 #plantSeedling2,
@@ -595,6 +614,7 @@ header {
     align-items: center;
 }
 
+
 .result {
     text-align: center;
 }
@@ -610,6 +630,8 @@ header {
     width: 50vw;
     padding-bottom: 2rem;
 }
+
+
 
 /* ABOUT PAGE */
 .aboutPage {
@@ -685,8 +707,7 @@ header {
     filter: saturate(0) brightness(100);
 }
 
-.aboutPage footer,
-.dataPage footer {
+.aboutPage footer {
     width: 100vw !important;
     background-color: #172a28;
     display: flex;
@@ -704,7 +725,11 @@ header {
     background-position: bottom;
     background-attachment: fixed;
     color: white;
-    overflow: hidden;
+}
+
+.dataPage main {
+    height: 80vh;
+    place-content: center;
 }
 
 #totalSeedlings {
@@ -715,13 +740,22 @@ header {
 #toPlantButton {
     left: unset;
     bottom: 0;
-    right: 10%;
+    right: 7%;
     transform: rotate(15deg);
 }
 
 #blurb {
     margin-block: 50px 100px;
     text-align: center;
+}
+
+.dataPage footer {
+    width: 100vw !important;
+    background-color: #172a28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
 }
 
 
@@ -985,6 +1019,10 @@ header {
 
     /* DATA PAGE */
 
+    .dataPage main {
+        height: 100vh;
+    }
+
     #toPlantButton {
         left: unset;
         bottom: unset;
@@ -1000,7 +1038,7 @@ header {
 }
 
 /*IMAC LAYOUT*/
-@media screen and (width > 2000px) {
+@media screen and (width > 2500px) {
 
     #birdButton,
     #toPlantButton,
@@ -1031,7 +1069,7 @@ header {
     }
 
     .dataPage main {
-        padding-block: 5rem;
+        height: 80vh;
     }
 
     #toPlantButton {
@@ -1042,32 +1080,36 @@ header {
     }
 
     .aboutPage article:first-child {
-        margin-top: 10rem;
+        margin-top: 12rem;
         padding-inline: 4rem;
+        height: 60vh;
     }
 
     .aboutPage article:first-child img {
-        max-width: 650px;
+        max-width: 800px;
     }
 
     #actionArticle {
         padding-inline: 6rem;
+        padding-bottom: 4rem;
     }
 
     #actions {
-        gap: 3rem;
+        gap: 2rem;
+        margin-top: 4rem;
     }
 
     .actionBox {
-        max-width: 400px;
+        max-width: 450px;
         gap: 0.75rem;
     }
 
+    /* SURVEY */
     .plantSeedlingPage {
         overflow-y: hidden;
     }
 
-    .chooseSeedling main {
+    .plantSeedlingPage main {
         justify-content: center;
         gap: 3rem;
     }
@@ -1093,7 +1135,11 @@ header {
     #plantSeedling2 input,
     #plantSeedling3 input {
         width: 25vw;
-        margin-top: 3rem !important;
+        margin-top: 5rem !important;
+    }
+
+    .formButtons {
+        margin-top: 2rem;
     }
 
     .desktopProgress {
@@ -1104,7 +1150,6 @@ header {
         width: 66vw;
     }
 }
-
 
 
 /* Jiggle animation */

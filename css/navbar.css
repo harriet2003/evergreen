@@ -156,21 +156,22 @@ nav i {
 }
 
 /*IMAC LAYOUT*/
-@media screen and (width > 2000px) {
+@media screen and (width > 2500px) {
     .forestPage .desktopNav {
         margin: 3rem 2rem 0 2rem;
     }
 
     .biggerTitle {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 
     .desktopNav {
         margin: 2rem;
+        align-items: flex-start;
     }
 
     .navTitle {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
 
     .desktopNav div a {
