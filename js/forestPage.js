@@ -1,4 +1,35 @@
-/* Modal Popup Check */
+document.addEventListener("DOMContentLoaded", function () {
+   function getSizeRange() {
+      if (window.innerWidth <= 768) {
+         // Mobile view
+         return { min: 70, max: 125 };
+      } else if (window.innerWidth >= 2200) {
+         //large view
+         return { min: 200, max: 350 };
+      } else {
+         // Laptop view
+         return { min: 100, max: 200 };
+      }
+   }
+
+   function setResponsiveSizes() {
+      const sizeRange = getSizeRange();
+      const seedlings = document.querySelectorAll(".seedlingOutput");
+
+      seedlings.forEach((seedling) => {
+         const randomSize = Math.floor(Math.random() * (sizeRange.max - sizeRange.min + 1)) + sizeRange.min;
+         seedling.style.width = randomSize + "px";
+      });
+   }
+
+   // Set sizes on page load
+   setResponsiveSizes();
+
+   // Set sizes on window resize
+   window.addEventListener("resize", setResponsiveSizes);
+});
+
+/* Help Modal Popup Check */
 document.addEventListener("DOMContentLoaded", function () {
    // Check if the modal has been shown before
    if (!sessionStorage.getItem("modalShown")) {
@@ -62,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //SUCCESS MODAL
-
 document.addEventListener("DOMContentLoaded", function () {
    // Check if the modal should be shown
    if (showSuccessModal) {

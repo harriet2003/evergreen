@@ -93,14 +93,14 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       <div id="forestFrame">
          <?php foreach ($plants as $plant): ?>
             <?php
-            $top = rand(10, 50);  // Adjust to ensure there's padding from the top and bottom
-            $left = rand(10, 90); // Adjust to ensure there's padding from the left and right
-            $size = rand(100, 200);     // Maintain random size between 100 and 250px
+            $top = rand(10, 50);
+            $left = rand(10, 90);
             ?>
-            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
-               onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
+            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%;" data-plant-id="<?= $plant['id'] ?>"
+               data-plant-name="<?= strtolower($plant['chosenSeedling']) ?>" onmouseover="playRustleAudio()"
+               onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
                <img src="images/illustrations/<?= strtolower($plant['chosenSeedling']) ?>.svg"
-                  alt="<?= $plant['chosenSeedling'] ?>" style="width: 100%;" id="forestImage" class="jiggle">
+                  alt="<?= $plant['chosenSeedling'] ?>" class="jiggle forestImage">
             </div>
          <?php endforeach; ?>
          <audio id="rustleAudio" src="rustle.mp3" type="audio/mpeg"></audio>
