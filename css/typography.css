@@ -293,7 +293,7 @@ input {
 }
 
 /*IMAC LAYOUT*/
-@media screen and (width > 2500px) {
+@media screen and (width > 2200px) {
     .button {
         font-size: 1.7rem;
     }
@@ -314,6 +314,14 @@ input {
     .introText h5 {
         width: 35%;
         font-size: 1.75rem;
+    }
+
+    .progressBar {
+        gap: 1.125rem;
+    }
+
+    .progressBar i {
+        font-size: 1.5rem;
     }
 
     #nextArrow,
@@ -352,18 +360,34 @@ input {
         width: 30%;
     }
 
+    .chooseSeedling main h5 {
+        font-size: 2.5rem;
+    }
+
     .carousel-slide p {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #learnMoreBtn {
-        font-size: 1rem;
+        font-size: 1.25rem;
         margin-top: 1rem;
+    }
+
+    .question {
+        font-size: 1.75rem;
     }
 
     #plantSeedling2 .question {
         margin-bottom: 4rem !important;
     }
+
+    .exampleText,
+    #userComment,
+    #userName,
+    #userLocation {
+        font-size: 1.25rem;
+    }
+
 
     .seedlingResult main h5 {
         font-size: 3rem;
