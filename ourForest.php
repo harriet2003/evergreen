@@ -60,6 +60,7 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
    <script src="js/forestPage.js" defer></script>
    <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+   <link rel="icon" type="image/x-icon" href="images/illustrations/fern.svg">
 </head>
 
 <body class="forestPage">

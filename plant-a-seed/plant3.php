@@ -11,6 +11,7 @@
     <script src="../js/script.js"></script>
     <script src="../js/locations.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/images/illustrations/fern/svg">
 </head>
 
 <body class="plantSeedlingPage questionLayout">
