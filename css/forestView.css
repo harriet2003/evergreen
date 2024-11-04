@@ -1,0 +1,18 @@
+header{
+	margin: 7rem;
+}
+
+#forestTitle{
+	font-size: 15rem;
+	margin-block: 0 2rem;
+}
+
+.forestViewPage #forestFrame{
+	height: 80vh;
+	overflow: visible;
+}
+
+.forestViewPage footer div{
+	align-items: flex-start;
+	text-align: left;
+}
