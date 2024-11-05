@@ -1,18 +1,40 @@
-header{
+header {
 	margin: 7rem;
 }
 
-#forestTitle{
+#forestTitle {
 	font-size: 15rem;
 	margin-block: 0 2rem;
 }
 
-.forestViewPage #forestFrame{
+.forestViewPage #forestFrame {
 	height: 80vh;
 	overflow: visible;
 }
 
-.forestViewPage footer div{
+.forestViewPage footer div {
 	align-items: flex-start;
 	text-align: left;
+}
+
+#qr-code {
+	max-height: 300px;
+	margin-right: 2.25rem;
+}
+
+/* Reload flash animation */
+@keyframes flash {
+
+	0%,
+	100% {
+		filter: brightness(1);
+	}
+
+	50% {
+		filter: brightness(1.75);
+	}
+}
+
+.latest-seedling {
+	animation: flash 1s ease-out 3;
 }

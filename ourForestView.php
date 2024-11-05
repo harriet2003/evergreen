@@ -1,29 +1,12 @@
 <?php
 include 'connection.php';
 
-//For plant data modal
-if (isset($_GET['plantId'])) {
-   $plantId = $_GET['plantId'];
+// Fetch the most recently added seedling ID
+$latestSeedlingQuery = "SELECT id FROM user_seedling ORDER BY id DESC LIMIT 1";
+$latestSeedlingResult = $mysqli->query($latestSeedlingQuery);
+$latestSeedlingId = $latestSeedlingResult->fetch_assoc()['id'] ?? null;
 
-   // Prepare the SQL query to fetch the relevant data
-   $sql = "SELECT userName, userLocation, userComment, chosenSeedling FROM user_seedling WHERE id = ?";
-   $stmt = $mysqli->prepare($sql);
-   $stmt->bind_param('i', $plantId);  // 'i' for integer type
-   $stmt->execute();
-   $result = $stmt->get_result();
-
-   if ($result->num_rows > 0) {
-      $data = $result->fetch_assoc();
-      echo json_encode($data);  // Make sure chosenSeedling is included here
-   } else {
-      echo json_encode(['error' => 'No data found']);
-   }
-
-   $stmt->close();
-   exit;
-}
-
-
+// Fetch a random selection of seedlings
 $sql = "SELECT id, chosenSeedling FROM user_seedling ORDER BY RAND() LIMIT 25";
 $result = $mysqli->query($sql);
 
@@ -34,15 +17,6 @@ if ($result->num_rows > 0) {
    }
 } else {
    echo "No plants found";
-}
-
-//For success modal
-session_start();
-// Check if the user was redirected after planting a seedling
-$showSuccessModal = false;
-if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
-   $showSuccessModal = true;
-   unset($_SESSION['plantSuccess']); // Unset the session variable so the modal doesn't show again on page refresh
 }
 ?>
 
@@ -72,12 +46,16 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       <div id="forestFrame">
          <?php foreach ($plants as $plant): ?>
             <?php
-            $top = rand(10, 50);  // Adjust to ensure there's padding from the top and bottom
-            $left = rand(10, 90); // Adjust to ensure there's padding from the left and right
-            $size = rand(300, 600);     // Maintain random size between 100 and 250px
+            $top = rand(10, 50);
+            $left = rand(10, 90);
+            $size = rand(300, 600);
+
+            // Add the 'latest-seedling' class if this is the most recent seedling
+            $isLatest = ($plant['id'] == $latestSeedlingId);
             ?>
-            <div class="seedlingOutput" style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
-               onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
+            <div class="seedlingOutput <?= $isLatest ? 'latest-seedling' : '' ?>"
+               style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;" onmouseover="playRustleAudio()"
+               onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
                <img src="images/illustrations/<?= strtolower($plant['chosenSeedling']) ?>.svg"
                   alt="<?= $plant['chosenSeedling'] ?>" style="width: 100%;" id="forestImage" class="jiggle">
             </div>
@@ -86,7 +64,25 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
       </div>
 
       <script>
-         var showSuccessModal = <?php echo json_encode($showSuccessModal); ?>;
+         const latestSeedlingId = <?php echo json_encode($latestSeedlingId); ?>;
+
+         let lastSeedlingId = null;
+
+         function checkForNewSeedling() {
+            fetch('checkLatestSeedling.php')
+               .then(response => response.json())
+               .then(data => {
+                  if (!lastSeedlingId) {
+                     lastSeedlingId = data.latestSeedlingId;
+                  } else if (data.latestSeedlingId > lastSeedlingId) {
+                     location.reload();
+                     console.log("Page reloaded due to new seedling");
+                  }
+               })
+               .catch(error => console.error('Error checking for new seedlings:', error));
+         }
+
+         setInterval(checkForNewSeedling, 10000);
       </script>
 
       <footer>
@@ -98,6 +94,8 @@ if (isset($_SESSION['plantSuccess']) && $_SESSION['plantSuccess']) {
 
             <h3>Scan the QR code to plant a seeding of hope</h3>
          </div>
+
+         <img id="qr-code" src="images/qr-code.png">
       </footer>
    </main>
 </body>
