@@ -1,35 +1,55 @@
-header{
-	margin: 7rem;
+header {
+	margin: 2rem;
 }
 
-#forestTitle{
-	font-size: 15rem;
+#forestTitle {
+	font-size: 10rem;
 	margin-block: 0 2rem;
 }
 
-.forestViewPage #forestFrame{
-	height: 80vh;
+.forestViewPage #forestFrame {
+	height: 85vh;
 	overflow: visible;
 }
 
-.forestViewPage footer div{
+.forestViewPage footer {
+	padding-left: 0;
+}
+
+.forestViewPage footer div {
 	align-items: flex-start;
 	text-align: left;
 }
 
-#qr-code{
-	max-height: 300px;
-	margin-right: 2.25rem;
+.forestViewPage footer h5 {
+	margin-block: 0 1rem;
+	font-size: 1rem;
+}
+
+.forestViewPage footer h4 {
+	margin-block: 0 0.75rem;
+	font-size: 1.75rem;
+}
+
+#qr-code {
+	max-height: 150px;
+	margin-right: 1.5rem;
+	margin-bottom: 0.75rem;
 }
 
 /* Reload flash animation */
 @keyframes flash {
-    0%, 100% {  filter: brightness(1); }
-    50% { filter: brightness(1.75); }
+
+	0%,
+	100% {
+		filter: brightness(1);
+	}
+
+	50% {
+		filter: brightness(1.75);
+	}
 }
 
 .latest-seedling {
-    animation: flash 1s ease-out 3;
+	animation: flash 1s ease-out 3;
 }
-
-
