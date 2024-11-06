@@ -87,17 +87,18 @@ nav i {
     font-weight: 600;
 }
 
-.chooseSeedling nav {
+.chooseSeedling nav{
     margin-bottom: 2rem;
 }
 
-.questionLayout .mobileNav {
-    margin: 0;
+.questionLayout .mobileNav{
+    margin-bottom: 0;
 }
 
-.seedlingResult .mobileNav {
-    margin-bottom: 3rem;
+.seedlingResult .mobileNav{
+	margin-bottom: 3rem;
 }
+
 
 /*DESKTOP LAYOUT*/
 @media screen and (width > 768px) {
@@ -131,12 +132,12 @@ nav i {
         cursor: pointer;
     }
 
-    .desktopNav div a:hover {
+    .desktopNav div a:hover{
         text-decoration: underline;
         text-underline-offset: 0.5rem;
     }
-
-    .fixedNav {
+	
+	   .fixedNav {
         position: fixed;
         top: 0;
         width: 95%;
@@ -150,31 +151,31 @@ nav i {
         font-size: 4rem;
     }
 
-    .chooseSeedling nav {
+    .chooseSeedling nav{
         margin-bottom: 0rem;
     }
 }
 
 /*IMAC LAYOUT*/
-@media screen and (width > 2500px) {
-    .forestPage .desktopNav {
-        margin: 3rem 2rem 0 2rem;
-    }
-
-    .biggerTitle {
-        font-size: 7rem;
-    }
-
-    .desktopNav {
-        margin: 2rem;
-        align-items: flex-start;
-    }
-
-    .navTitle {
-        font-size: 4.5rem;
-    }
-
-    .desktopNav div a {
-        font-size: 1.5rem;
-    }
+@media screen and (width > 2200px) {
+	.forestPage .desktopNav{
+		margin: 3rem 2rem 0 2rem;
+	}
+	
+	.biggerTitle{
+		font-size: 7rem;
+	}
+	
+	.desktopNav{
+		margin: 2rem;
+		align-items: flex-start;
+	}
+	
+	.navTitle{
+		font-size: 4.5rem;
+	}
+	
+	.desktopNav div a {
+		font-size: 1.5rem;
+	}
 }

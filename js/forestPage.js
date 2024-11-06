@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (window.innerWidth >= 2200) {
          //large view
          return { min: 200, max: 350 };
-      } else {
+	  }else{
          // Laptop view
          return { min: 100, max: 200 };
       }

@@ -21,7 +21,7 @@ if (isset($_POST['plantButton'])) {
     <link rel="stylesheet" href="../css/navbar.css">
     <script src="../js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/images/illustrations/fern/svg">
+	<link rel="icon" type="image/x-icon" href="/images/illustrations/fern.svg">
 </head>
 
 <body class="seedlingResult">

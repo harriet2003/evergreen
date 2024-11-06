@@ -22,7 +22,6 @@ if ($result->num_rows > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,20 +41,21 @@ if ($result->num_rows > 0) {
       <h1 id="forestTitle">Our Forest</h1>
    </header>
 
-   <main>
+   <main> 
       <div id="forestFrame">
-         <?php foreach ($plants as $plant): ?>
+          <?php foreach ($plants as $plant): ?>
             <?php
             $top = rand(10, 50);
             $left = rand(10, 90);
             $size = rand(300, 600);
-
+		  
             // Add the 'latest-seedling' class if this is the most recent seedling
             $isLatest = ($plant['id'] == $latestSeedlingId);
             ?>
-            <div class="seedlingOutput <?= $isLatest ? 'latest-seedling' : '' ?>"
-               style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;" onmouseover="playRustleAudio()"
-               onmouseout="stopRustleAudio()" onclick="showDataModal(<?= $plant['id'] ?>)">
+            <div class="seedlingOutput <?= $isLatest ? 'latest-seedling' : '' ?>" 
+                 style="top: <?= $top ?>%; left: <?= $left ?>%; width: <?= $size ?>px;"
+                 onmouseover="playRustleAudio()" onmouseout="stopRustleAudio()" 
+                 onclick="showDataModal(<?= $plant['id'] ?>)">
                <img src="images/illustrations/<?= strtolower($plant['chosenSeedling']) ?>.svg"
                   alt="<?= $plant['chosenSeedling'] ?>" style="width: 100%;" id="forestImage" class="jiggle">
             </div>

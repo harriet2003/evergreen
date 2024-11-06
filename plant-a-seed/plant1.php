@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="../js/script.js" defer></script>
     <script src="../js/chooseSeedling.js" defer></script>
     <script src="https://kit.fontawesome.com/2028364a6f.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="/images/illustrations/fern/svg">
+    <link rel="icon" type="image/x-icon" href="/images/illustrations/fern.svg">
 </head>
 
 <body class="plantSeedlingPage chooseSeedling">
