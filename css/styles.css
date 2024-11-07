@@ -268,7 +268,7 @@ header {
     position: relative;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow: visable;
 }
 
 .seedlingOutput {
@@ -797,7 +797,7 @@ header {
         height: 100vh;
         display: flex;
         flex-direction: row-reverse;
-		justify-content: center;
+        justify-content: center;
     }
 
     .introText {
@@ -1043,9 +1043,9 @@ header {
 /*IMAC LAYOUT*/
 @media screen and (width > 2200px) {
 
-	.button{
-		padding-inline: 3rem;
-	}
+    .button {
+        padding-inline: 3rem;
+    }
 
     #birdButton,
     #toPlantButton,
@@ -1110,10 +1110,10 @@ header {
         max-width: 400px;
         gap: 0.75rem;
     }
-	
-	.actionBox div{
-		border: 2px solid white;
-	}
+
+    .actionBox div {
+        border: 2px solid white;
+    }
 
     /* SURVEY */
     .plantSeedlingPage {
@@ -1132,11 +1132,11 @@ header {
     .carousel {
         width: 33vw;
     }
-	
-	.carousel-slide{
-		max-width: 450px;
-		margin-bottom: 3rem;
-	}
+
+    .carousel-slide {
+        max-width: 450px;
+        margin-bottom: 3rem;
+    }
 
     #plantModal .modal-content,
     #successModal .modal-content {
